@@ -1,0 +1,69 @@
+@use '../helpers/_variables' as *
+@use '../layout/_grid' as *
+@use '../helpers/_mixin' as *
+
+footer
+  padding: 3rem 0 2rem
+  @include bgImage()
+  position: relative
+
+  &::before
+    content: ''
+    @include dark($opacity: .8)
+
+  .footer-list
+    @include grid($columns: 1fr 1fr 1fr 1fr)
+    position: relative
+    z-index: 2
+
+    .item
+      color: $light
+      margin-bottom: 1rem
+
+      .logo, .f-title
+        margin-bottom: 1rem
+
+        img
+          height: 4rem
+          width: 13rem
+          object-fit: contain
+
+      .f-title
+        font-size: 24px
+        font-weight: 500
+
+      ul
+        li
+          padding: .4rem 0
+          cursor: pointer
+
+          i
+            margin-right: 5px
+
+          a
+            color: $light
+            width: 100%
+
+      .desc
+        font-size: 16px
+        line-height: 163.4%
+        max-height: 210px
+        overflow: hidden
+
+  .copyright
+    position: relative
+    padding-top: 2rem
+    margin-top: 2rem
+    border-top: 1px solid #ADADAD
+    color: $light
+    z-index: 2
+    @include flex($justify: space-between)
+
+    .icons
+      @include flex($justify: flex-end)
+
+      .icon
+        padding: 0 1rem
+
+        a
+          color: $light

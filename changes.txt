@@ -1,0 +1,2824 @@
+remove review, more info, video
+add equipment list
+
+
+/*custom
+.footer-top{margin:25px 0;}*/
+
+p,
+ol,
+ul {
+    font-size: 16px!important;
+    font-weight: 500;
+}
+
+p {
+    line-height: 30px;
+}
+
+ol,
+ul {
+    line-height: 26px;
+}
+
+h3 {
+    color: #444;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+.footer-top {
+    background: #f1f1f1;
+    padding-top: 19px;
+    margin-top: -19px;
+    padding-bottom: 19px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /*font-family: 'Rubik',sans-serif!important;*/
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2,
+h3 {
+    line-height: 1.3!important;
+}
+
+h4 {
+    font-size: 19px!important;
+}
+
+h3 {
+    font-size: 21px!important;
+}
+
+h2 {
+    font-size: 22px!important;
+    text-transform: uppercase;
+}
+
+
+/* Image as background*/
+
+.image-bg {
+    background: no-repeat center;
+    width: 100%;
+    min-height: 400px;
+    background-size: cover;
+}
+
+.footer-bottom,
+.location,
+.email,
+.phone {
+    /*font-family: "Rubik",sans-serif;*/
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.footer-bottom li {
+    margin: 0!important;
+    padding: 0 0 5px!important;
+    font-weight: normal;
+    color: #444;
+}
+
+.footer-bottom>li {
+    display: block;
+    ;
+}
+
+.footer-label {
+    /*font-family: "Rubik",sans-serif;*/
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    letter-spacing: .5px;
+    color: #444;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: block;
+    clear: both;
+    margin-bottom: 14px;
+}
+
+.social-icon-wrap {
+    position: relative;
+    display: inline-block;
+    margin: 5px 5px 5px 0!important;
+    vertical-align: middle;
+}
+
+a i {
+    background: #205D7A;
+    color: #fff;
+    width: 40px!important;
+    height: 40px!important;
+    font-size: 25px!important;
+    text-align: center;
+    margin-right: 0;
+    padding-top: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/*a i {
+    background: #205D7A;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 0;
+    padding-top: 21%;
+    transition: all 0.2s ease-in-out;
+}*/
+
+.fa-facebook {
+    background: #3b5998
+}
+
+.fa-instagram {
+    background: #F30;
+}
+
+.fa-youtube-play {
+    background: #C00;
+}
+
+.fa-linkedin {
+    background: #007bb6
+}
+
+.fa-twitter {
+    background: #00aced
+}
+
+.fa-star {
+    color: #FC0;
+}
+
+.google-plus {
+    background: #dd4b39
+}
+
+.social-icon-wrap .fa-phone {
+    background: #444;
+}
+
+.social-icon-wrap .fa-envelope-o {
+    background: #CC3;
+}
+
+a i:hover {
+    opacity: .7;
+}
+
+.location i,
+.phone i,
+.email i {
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.fullboxfooter a {
+    color: #FF6;
+    text-decoration: none;
+}
+
+
+/*=Sticky Scroll Styles=*/
+
+.fixed {
+    position: fixed;
+    top: 0;
+    /*z-index:99999;*/
+}
+
+.clear {
+    clear: both;
+}
+
+.sm-txt {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #444;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+
+/* SLIDER */
+
+#main-slideshow {
+    margin-top: -10px;
+}
+
+.topeight {
+    /*margin-top:165px;*/
+    margin-top: 0;
+}
+
+.goog-te-gadget {
+    /*font-family: Rubik;*/
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 11px;
+    color: rgba(220, 10, 10, 0.37);
+    margin-top: 13px;
+    white-space: nowrap;
+}
+
+.goog-te-gadget-simple {
+    /* font-family: Rubik!important;*/
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #fbfbfb!important;
+    border: none!important;
+    font-size: 15px!important;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 60px;
+    width: auto!important;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #444444;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.no-border {
+    border-radius: 0!important;
+    -webkit-border-radius: 0!important;
+    -moz-border-radius: 0!important;
+    padding: 10px 30px!important;
+}
+
+.button {
+    /*font-family: 'Rubik',sans-serif!important;*/
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #fff!important;
+    /* Green */
+    border: none!important;
+    color: #000000!important;
+    padding: 12px 50px!important;
+    text-align: center!important;
+    text-decoration: none!important;
+    display: inline-block!important;
+    font-size: 1em!important;
+    text-shadow: none!important;
+    -webkit-box-shadow: none!important;
+    border-radius: 0!important;
+    -webkit-border-radius: 0!important;
+    -moz-border-radius: 0!important;
+}
+
+.button:hover,
+.no-border:hover {
+    background-color: #fafafa!important;
+    /* Green */
+}
+
+
+/**
+ * Tooltip Styles
+ */
+
+
+/* Base styles for the element that has a tooltip */
+
+[data-tooltip],
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+
+/* Base styles for the entire tooltip */
+
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after {
+    position: absolute;
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    -moz-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    pointer-events: none;
+}
+
+
+/* Show the entire tooltip on hover and focus */
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+
+/* Base styles for the tooltip's directional arrow */
+
+.tooltip:before,
+[data-tooltip]:before {
+    z-index: 1001;
+    border: 6px solid transparent;
+    background: transparent;
+    content: "";
+}
+
+
+/* Base styles for the tooltip's content area */
+
+.tooltip:after,
+[data-tooltip]:after {
+    z-index: 1000;
+    padding: 8px;
+    width: 360px!important;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+
+/* Directions */
+
+
+/* Top (default) */
+
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after,
+.tooltip-top:before,
+.tooltip-top:after {
+    bottom: 100%;
+    left: 50%;
+}
+
+[data-tooltip]:before,
+.tooltip:before,
+.tooltip-top:before {
+    margin-left: -6px;
+    margin-bottom: -12px;
+    border-top-color: #000;
+    border-top-color: hsla(0, 0%, 20%, 0.9);
+}
+
+
+/* Horizontally align top/bottom tooltips */
+
+[data-tooltip]:after,
+.tooltip:after,
+.tooltip-top:after {
+    margin-left: -80px;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after,
+.tooltip-top:hover:before,
+.tooltip-top:hover:after,
+.tooltip-top:focus:before,
+.tooltip-top:focus:after {
+    -webkit-transform: translateY(-12px);
+    -moz-transform: translateY(-12px);
+    transform: translateY(-12px);
+}
+
+
+/* Left */
+
+.tooltip-left:before,
+.tooltip-left:after {
+    right: 100%;
+    bottom: 50%;
+    left: auto;
+}
+
+.tooltip-left:before {
+    margin-left: 0;
+    margin-right: -12px;
+    margin-bottom: 0;
+    border-top-color: transparent;
+    border-left-color: #000;
+    border-left-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-left:hover:before,
+.tooltip-left:hover:after,
+.tooltip-left:focus:before,
+.tooltip-left:focus:after {
+    -webkit-transform: translateX(-12px);
+    -moz-transform: translateX(-12px);
+    transform: translateX(-12px);
+}
+
+
+/* Bottom */
+
+.tooltip-bottom:before,
+.tooltip-bottom:after {
+    top: 100%;
+    bottom: auto;
+    left: 50%;
+    font-size: 13px!important;
+}
+
+.tooltip-bottom:before {
+    margin-top: -12px;
+    margin-bottom: 0;
+    border-top-color: transparent;
+    border-bottom-color: #000;
+    border-bottom-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-bottom:hover:before,
+.tooltip-bottom:hover:after,
+.tooltip-bottom:focus:before,
+.tooltip-bottom:focus:after {
+    -webkit-transform: translateY(12px);
+    -moz-transform: translateY(12px);
+    transform: translateY(12px);
+}
+
+
+/* Right */
+
+.tooltip-right:before,
+.tooltip-right:after {
+    bottom: 50%;
+    left: 100%;
+}
+
+.tooltip-right:before {
+    margin-bottom: 0;
+    margin-left: -12px;
+    border-top-color: transparent;
+    border-right-color: #000;
+    border-right-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-right:hover:before,
+.tooltip-right:hover:after,
+.tooltip-right:focus:before,
+.tooltip-right:focus:after {
+    -webkit-transform: translateX(12px);
+    -moz-transform: translateX(12px);
+    transform: translateX(12px);
+}
+
+
+/* Move directional arrows down a bit for left/right tooltips */
+
+.tooltip-left:before,
+.tooltip-right:before {
+    top: 3px;
+}
+
+
+/* Vertically center tooltip content for left/right tooltips */
+
+.tooltip-left:after,
+.tooltip-right:after {
+    margin-left: 0;
+    margin-bottom: -16px;
+}
+
+.text-small {
+    font-size: 13px!important;
+}
+
+.footer-m ul {
+    margin: 0;
+    padding: 0;
+    font-size: 15px!important;
+}
+
+.footer-m ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+.footer-m li:not(:first-child):before {
+    content: " | ";
+}
+
+.footer-m li a:active {
+    color: #444!important;
+}
+
+label {
+    font-weight: normal!important;
+    font-size: 16px!important;
+}
+
+.iphorm-element-wrap-text input {
+    max-width: 470px!important;
+    padding: 6px!important;
+}
+
+.contact-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/* DIVIDER */
+
+.div-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 42px;
+    padding: 30px 0;
+    margin: 0 0 30px 0;
+    font-weight: 400;
+    text-align: center;
+    border-bottom: 1px solid #acacac;
+    position: relative;
+}
+
+.section-title:after,
+.page-title:after,
+.gallery-title:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -19px;
+    width: 260px;
+    height: 44px;
+    margin-left: -130px;
+    background: #fff url(../img/title-logo.png) no-repeat 50% 0;
+}
+
+.arrowtxt {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #1f1f1f;
+    text-decoration: none;
+    border: 0;
+    background: none;
+    padding: 2px 0;
+    margin: 30px 0;
+}
+
+.arrowtxt:after {
+    content: '';
+    display: inline-block;
+    vertical-align: initial;
+    width: 13px;
+    min-height: 7px;
+    height: initial;
+    background-image: url(../img/icon-arrow-right--blue.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: -3px;
+    background-position-y: 50%;
+    margin-left: 6px;
+    -webkit-transition: background-position .3s ease;
+    -webkit-transition-delay: 0s;
+    -moz-transition: background-position .3s ease;
+    -o-transition: background-position .3s ease;
+    transition: background-position .3s ease false;
+}
+
+@media screen and (max-width: 414px) {
+    /* search */
+    select.mobile-search {
+        width: 250px!important;
+        margin: 5px 0;
+    }
+    input.mobile-search {
+        width: 250px!important;
+        margin-top: 5px;
+    }
+    #search {
+        text-align: center;
+    }
+    #wrapper-body {
+        padding: 10px !important;
+    }
+    .indicators-line>.carousel-indicators li {
+        display: none;
+    }
+    .left-content,
+    .right-content,
+    .col-sm-12,
+    .col-xm-12 {
+        padding: 0!important;
+    }
+    .colimg img {
+        width: 100%!important;
+        height: auto
+    }
+    .trip-banner {
+        margin-bottom: 92px;
+    }
+    .difference-image,
+    .social-image {
+        width: 90%;
+    }
+}
+
+
+/* !- 320 (portrait phones) */
+
+@media screen and (max-width: 320px) {
+    .contact-form {
+        width: 100%;
+    }
+    .iphorm-element-wrap-text input {
+        max-width: 100px!important;
+        padding: 6px!important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .content-left,
+    .content-right {
+        display: none;
+    }
+    #wrapper-body {
+        padding: 0!important;
+    }
+}
+
+.page-banner {
+    height: 300px;
+}
+
+.page-banner img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    min-height: 300px
+}
+
+
+/* TRIP PACKAGES*/
+
+#wrapper-body {
+    padding: 0 6em 0 6em;
+}
+
+.main-img {
+    widht: 100%;
+    height: 390px;
+    background: #444;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.second-main-img {
+    widht: 100%;
+    height: 180px;
+    background: #444;
+    margin: 30px 0;
+}
+
+.second-main-img:nth-child(3n+1) {
+    margin-top: 0;
+}
+
+.image-bg-services {
+    background: no-repeat center;
+    width: 100%;
+    min-height: 224px;
+    background-size: cover;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.second-main-img::after {
+    display: block;
+    /* background-image: linear-gradient(to bottom, transparent 50%, black 100%);*/
+    height: 224px;
+    width: 100%;
+    content: '';
+}
+
+.main-img::after {
+    display: block;
+    background-image: linear-gradient(to bottom, transparent 50%, black 100%);
+    height: 390px;
+    width: 100%;
+    content: '';
+}
+
+.category-box-big,
+.category-box-1,
+.category-box-2,
+.days-box {
+    width: auto!important;
+    padding: 8px;
+    height: 35px;
+    margin-left: 20px;
+    color: #fff;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.category-box-big {
+    background: #d6e232;
+    margin-top: 280px;
+    position: absolute;
+}
+
+.category-box-1,
+.category-box-2,
+.days-box {
+    margin-top: 90px;
+    position: absolute;
+}
+
+.category-box-1 {
+    background: #3de0dd;
+}
+
+.category-box-2 {
+    background: #d06b2b;
+}
+
+.days-box {
+    background: #444;
+    opacity: 0.9;
+}
+
+.category-box-big-content,
+.category-box-small-content {
+    margin: 0 20px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.category-box-big-content {
+    margin-top: 320px;
+    position: absolute;
+}
+
+.category-box-small-content {
+    margin-top: 130px;
+    position: absolute;
+}
+
+.intro h2 {
+    font-weight: 700;
+    color: #0E78CF;
+}
+
+.intro h3 {
+    margin-top: 0 !important;
+    font-weight: 500;
+    color: #0E78CF;
+}
+
+.intro p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+@media(max-width:767px) {
+    .intro {
+        padding: 2em 0 !important;
+    }
+    .img-circle {
+        border-radius: 0%!important;
+    }
+}
+
+@media(min-width:768px) {
+    .col-cunt-2 {
+        overflow: hidden;
+        padding: 25px 0;
+        column-count: 2;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-gap: 30px;
+        max-height: 280px
+    }
+    .bimg {
+        width: 85%;
+        height: 664px;
+        overflow: hidden;
+        background: #000;
+        position: relative;
+        left: 5%;
+    }
+    .bimg2 {
+        width: 95%;
+        height: 298px;
+        overflow: hidden;
+        margin-bottom: 32px;
+        background: #000;
+        position: relative;
+        left: 5%;
+    }
+    .bimg3 {
+        width: 95%;
+        height: 298px;
+        overflow: hidden;
+        margin-top: 32px;
+        background: #000;
+        position: relative;
+        right: 5%;
+    }
+    .bimg img,
+    .bimg2 img,
+    .bimg3 img {
+        width: 100%;
+        height: auto;
+    }
+    a:hover>.bimg img,
+    a:hover>.bimg2 img,
+    a:hover>.bimg3 img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        background-color: #000;
+        opacity: 0.8;
+    }
+    .img img {
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    .img {
+        height: 100%;
+        margin-bottom: 15px;
+    }
+    .img img {
+        background: no-repeat center;
+        width: 100%;
+        height: 100%;
+        max-height: 290px!important;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    .btext {
+        width: 282px;
+        height: auto;
+        padding: 40px;
+        background: #fff;
+        top: 110px;
+        position: absolute;
+        left: -5%;
+    }
+    .about-txt {
+        width: auto;
+        height: auto;
+        margin: 0 3px;
+        padding: 20px;
+        background: #fff;
+        top: 50px;
+        position: absolute;
+        left: -5%;
+    }
+    .about-txt1 {
+        width: auto;
+        height: auto;
+        margin: 0 3px;
+        padding: 20px;
+        background: #fff;
+        top: 50px;
+        position: absolute;
+        right: -5%;
+    }
+    .btext2 {
+        width: 220px;
+        padding: 20px;
+        background: #fff;
+        top: 50px;
+        position: absolute;
+        left: -10%;
+    }
+    .btext3 {
+        width: 220px;
+        height: auto;
+        padding: 20px;
+        background: #fff;
+        top: 100px;
+        right: 0;
+        position: absolute;
+    }
+    .intro {
+        padding: 5em !important;
+    }
+    .intro p {
+        text-align: justify;
+    }
+    .logo-hide {
+        display: none;
+    }
+}
+
+
+/*read more button*/
+
+.readMore {
+    background-color: #444;
+    border: 1px solid #000;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px 25px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #555;
+    border-radius: 0!important;
+    -moz-border-radius: 0!important;
+    -webkit-border-radius: 0!important;
+}
+
+.readMore:hover {
+    background-color: #000000!important;
+    color: #f1f1f1!important;
+}
+
+.readMore:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/* Gallery */
+
+.gallery-img {
+    float: left;
+    margin: 3px;
+}
+
+.logo-hide {
+    float: left;
+}
+
+.bimg img,
+.bimg2 img,
+.bimg3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.simple_title {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.simple_title2 {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.btext,
+.btext1,
+.btext2,
+.btext3 {
+    margin: 20px 0
+}
+
+.p_text {
+    font-size: 13px;
+    line-height: 20px;
+    /*margin-top: 20px;*/
+    display: block
+}
+
+
+/*.sm li a { color:#fff!important; }*/
+
+
+/*.active a {
+    background-color: #fff;
+    color: #000;
+}*/
+
+.catering {
+    height: 120px!important;
+}
+
+.catering h2 {
+    font-weight: bold!important;
+}
+
+.catering p,
+.catering-page p {
+    font-size: 15px!important;
+    line-height: 22px;
+    margin: -10px 0;
+}
+
+.catering-page {
+    border: 1px solid #444;
+    margin: 15px;
+    float: left;
+    width: 100%;
+    padding: 40px;
+}
+
+.catering-page h3 {
+    color: #F90;
+}
+
+.catering-page h2 {
+    font-weight: bold;
+    margin-top: -10px
+}
+
+
+/*about image*/
+
+.about-img {
+    height: 335px;
+}
+
+.about-img img {
+    background: no-repeat center;
+    width: 100%;
+    max-height: 335px;
+    object-fit: cover;
+}
+
+.iphorm-theme-light-light .iphorm-elements .iphorm-element-wrap-text input,
+.iphorm-theme-light-light .iphorm-elements .iphorm-element-wrap-captcha input,
+.iphorm-theme-light-light .iphorm-elements .iphorm-element-wrap-password input,
+.iphorm-theme-light-light .iphorm-elements .iphorm-element-wrap select,
+.iphorm-theme-light-light .iphorm-elements .iphorm-element-wrap textarea {
+    width: 100%;
+}
+
+.link-color a {
+    color: #ED2224 !important;
+    font-size: 1.5em;
+}
+
+.link-text {
+    transition: color .5s cubic-bezier(.165, .84, .44, 1) 80ms;
+    color: #444;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.animated-link-style:before {
+    content: '';
+    display: inline-block;
+    border-bottom: 2px solid;
+    width: 1.5rem;
+    margin-right: 1.125rem;
+    vertical-align: middle;
+    transform-origin: center left;
+    transition: transform .3s cubic-bezier(.4, 0, .2, 1), -webkit-transform .3s cubic-bezier(.4, 0, .2, 1);
+    color: #444;
+}
+
+.animated-link-style:hover::before {
+    transform: scaleX(1.5);
+}
+
+.animated-link-style .link-text {
+    display: inline-block;
+    transform: translateZ(0);
+    transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.animated-link-style:hover .link-text {
+    transform: translateX(20px);
+}
+
+.big-bg {
+    background: #fff;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.big-bg-odd {
+    background:/*f2f2f2*/
+    ;
+    width: 100%;
+    padding: 40px;
+}
+
+.big-bg-odd h4 {
+    font-size: 35px !important;
+}
+.big-bg-odd p {
+    margin-bottom: 30px;
+}
+
+.big-bg img {
+    /*float:right;margin-right: -15px;*/
+    display: block;
+    max-width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.big-bg-odd img {
+    /*float:left;margin-left: -15px;*/
+    display: block;
+    max-width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.gap {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.gap-img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.left-content,
+.right-content {
+    /*padding: 15px 10px 10px 50px;*/
+    padding: 0 30px;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+.left-content p,
+.right-content p {
+    font-size: 20px;
+    line-height: 1.7em;
+}
+
+.left-content h1,
+.right-content h1 {
+    font-size: 40px;
+    font-weight: 300;
+    font-weight: 700;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+}
+
+.left-content h4,
+.right-content h4 {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .25em;
+    line-height: 1.33em;
+    text-transform: uppercase;
+}
+
+.heading-component-title {
+    position: relative;
+    display: inline-block;
+    padding-left: 15px;
+    line-height: 26px;
+    font-size: 30px !important;
+    font-weight: 700;
+    letter-spacing: .025em;
+}
+
+.heading-component-title::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 0;
+    border-left: 4px solid #35ad79;
+    pointer-events: auto;
+}
+
+
+/*---------	17. Breadcrumbs --------- */
+
+.breadcrumbs {
+    padding: 0px;
+    margin: 15px auto 5px;
+    font-size: 13px;
+    text-align: left;
+}
+
+.breadcrumbs a {
+    color: #666;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.breadcrumbs span {
+    display: inline-block;
+    margin: 0 5px 0 5px;
+    color: #ccc;
+    font-size: 11px;
+}
+
+.breadcrumbs ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.breadcrumbs ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+.breadcrumbs strong {
+    font-weight: 600;
+    color: #0083ff;
+}
+
+.schedule-bottom {
+    font-size: 1.6rem;
+    color: #005152;
+    border: 2px solid #005152;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+.schedule:hover {
+    background-color: #1d7071!important;
+    color: #f1f1f1!important;
+}
+
+.schedule-bottom:active {
+    position: relative;
+    top: 1px;
+}
+
+.schedule-bottom:hover {
+    background-color: #005152!important;
+    color: #fff!important;
+}
+
+.schedule:active {
+    position: relative;
+    top: 1px;
+}
+
+.parent {
+    width: 100%;
+    margin: 20px;
+    height: 380px;
+    /*border: 1px solid blue;*/
+    overflow: hidden;
+    position: relative;
+    float: left;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.child {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.parent:hover .child,
+.parent:focus .child {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.parent:hover .child:before,
+.parent:focus .child:before {
+    display: block;
+}
+
+.parent:hover a,
+.parent:focus a {
+    display: block;
+}
+
+.child:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*background-color: rgba(52,73,94,0.75);*/
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 960px) {
+    .parent {
+        width: 100%;
+        margin: 20px 0px
+    }
+    .wrapper {
+        padding: 20px 20px;
+    }
+}
+
+#featuredWrap .heading-component-title {
+    font-size: 27px !important;
+}
+
+/*****     new design     *****/
+.sliderPackage {
+    margin: 5rem 0 !important;
+}
+.package-section {
+  margin-top: 4rem;
+}
+
+.package-section .item .top-item {
+  position: relative;
+  height: 46rem  !important;
+  margin-bottom: 3rem;
+}
+
+.package-section .item .top-item .image {
+  height: 100%;
+  width: 100%;
+}
+
+.package-section .item .top-item .image::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+.package-section .item .top-item .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.package-section .item .top-item .content {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  z-index: 2;
+}
+
+.package-section .item .top-item .content .package-title {
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.package-section .item .top-item .content h5 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.package-section .item .top-item .content h5 i {
+  font-size: 1.7rem;
+  margin-left: 1rem;
+}
+
+.package-section .item .top-item .create-button {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  border-radius: 5rem !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #29ACED !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.package-section .item .top-item .create-button:hover {
+  background-color: #e99619  !important;
+}
+
+.package-section .item .top-item .create-button i {
+  margin-left: 1rem;
+  font-size: 1.7rem;
+}
+
+.package-section .item .bottom-item {
+  /*display: grid;*/
+  /*grid-template-columns: 1fr 1fr 1fr;*/
+  /*grid-gap: 1rem;*/
+}
+
+.package-section .item .bottom-item .small-item {
+  /*width: 100%;*/
+  height: 23rem !important;
+  position: relative;
+  overflow: hidden;
+  
+  margin-bottom: 2rem !important;
+}
+
+.package-section .item .bottom-item .small-item:hover > img {
+  transform: scale(1.1);
+}
+
+.package-section .item .bottom-item .small-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+.package-section .item .bottom-item .small-item .small-item-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.package-section .item .bottom-item .small-item .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.7rem 1.3rem .7rem;
+  width: 100%;
+  z-index: 2;
+}
+
+.package-section .item .bottom-item .small-item .content .package-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #ffffff;
+}
+
+.package-section .item .bottom-item .small-item .content .small-item-footer {
+  width: 100%;
+}
+
+.package-section .item .bottom-item .small-item .content .small-item-footer ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.package-section .item .bottom-item .small-item .content .small-item-footer li {
+  display: flex;
+  justify-content: flex-start;
+  color: #ffffff;
+  gap: 0.3rem;
+}
+
+.package-section .item .bottom-item .small-item .content .small-item-footer li img {
+  height: 3.5rem;
+  width: 3.5rem;
+  object-fit: contain;
+}
+
+.package-section .item .bottom-item .small-item .content .small-item-footer li .name {
+  font-size: 1.1rem;
+}
+
+.package-section .item .bottom-item .small-item .content .small-item-footer li h6 {
+  font-size: 1.4rem;
+  width: 100%;
+  font-weight: 400;
+  line-height: 0.7rem;
+  margin: 0;
+}
+
+.control-round .carousel-control {
+    opacity: 1 !important;
+    background: rgba(0,0,0,.5) !important;
+}
+
+.TestPage {
+  position: relative;
+  padding: 15rem 0 8rem;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-end;
+  margin-top: 6rem;
+}
+
+.TestPage .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.TestPage .wrapper {
+  width: 100%;
+}
+
+.TestPage .itemsList {
+  position: relative;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+.TestPage .itemsList .item {
+  background-color: #ffffff;
+  border-top: 0.34rem solid #29ACED;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.TestPage .itemsList .item .icon-sec {
+  height: 9rem;
+  width: 9rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #29ACED;
+}
+
+.TestPage .itemsList .item .icon-sec img {
+  height: 60%;
+  width: 60%;
+  object-fit: contain;
+}
+
+.TestPage .itemsList .item .content {
+  margin-top: 2rem;
+  max-width: 20rem;
+  text-align: center;
+}
+
+.TestPage .itemsList .item .content .item-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.TestPage .itemsList .item .content .desc {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  margin: 1rem 0 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+  max-height: 1rem;
+}
+
+.TestPage .itemsList .item .content .learn {
+  margin-top: 4rem !important;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #29ACED !important;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.sliderBanner .carousel-inner .container .slide-text {
+    position: absolute !important;
+    right: 0 !important;
+    left: auto !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 50% !important;
+    margin: 0 !important;
+    z-index: 2;
+}
+
+.sliderBanner .carousel-inner .container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.sliderBanner .carousel-inner .container .slide-text h1 {
+    line-height: 6rem !important;
+    text-align: right !important;
+    display: block !important;
+}
+
+.sliderBanner .carousel-inner .container .slide-text p {
+    text-align: right !important;
+}
+
+.sliderBanner .carousel-inner>.item>img {
+    height: 80rem !important;
+    object-fit: cover !important
+}
+
+.package-details-banner-bg {
+    background-color: #eeeeee !important;
+    height: 17rem;
+}
+
+.package-details-pages .package-title-area {
+  text-align: center;
+  margin: 2rem 0;
+}
+.package-details-pages .package-title-area .package-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 1.3px;
+}
+.package-details-pages .package-title-area h4 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.package-details-pages .section-title-area {
+  position: relative;
+}
+.package-details-pages .section-title-area .section-titles {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+.package-details-pages .package-details-section {
+  display: flex;
+  justify-content: stretch;
+  gap: 2rem;
+}
+.package-details-pages .package-details-section .image-area {
+  flex: 60%;
+  height: 40rem;
+  width: 100%;
+}
+.package-details-pages .package-details-section .image-area img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.package-details-pages .package-details-section .package-details-area {
+  flex: 40%;
+}
+.package-details-pages .package-details-section .package-details-area .package-sec-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.package-details-pages .package-details-section .package-details-area .price-sec {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid #cccccc;
+}
+.package-details-pages .package-details-section .package-details-area .price-sec .price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #21ACEC;
+}
+.package-details-pages .package-details-section .package-details-area .price-sec h5 {
+  color: #21ACEC;
+  font-size: 1.4rem;
+}
+.package-details-pages .package-details-section .package-details-area .button-group {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.package-details-pages .package-details-section .package-details-area .button-group .button-area {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.package-details-pages .package-details-section .package-details-area .button-group .button-area a {
+  height: 100%;
+  flex: 50%;
+  width: 100%;
+}
+.package-details-pages .package-details-section .package-details-area .button-group .button-area a:nth-last-child(1) button {
+  background-color: #444444 !important;
+  transition: 0.4s;
+}
+.package-details-pages .package-details-section .package-details-area .button-group .button-area a:nth-last-child(1) button:hover {
+  background-color: #e99619 !important;
+}
+.package-details-pages .package-details-section .package-details-area .button-group .button-area a button {
+  width: 100%;
+  height: 100%;
+  background-color: #21ACEC !important;
+  border: none !important;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.package-details-pages .package-details-section .package-details-area .about-trip .about-trip-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+.package-details-pages .package-details-section .package-details-area .about-trip .description {
+  font-size: 1rem;
+  color: #4d4d4d;
+  line-height: 1.6rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+.package-details-pages .package-details-section .package-details-area .about-trip ul {
+  margin-bottom: 1rem;
+}
+.package-details-pages .package-details-section .package-details-area .about-trip ul li {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+.package-details-pages .package-details-section .package-details-area .about-trip ul li.list-title {
+  font-weight: 600;
+}
+.package-details-pages .package-main-details .package-details-bg-image {
+  height: 50rem !important;
+  width: 100%;
+}
+.package-details-pages .package-main-details .package-details-bg-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.package-details-pages .package-all-details {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+.package-details-pages .package-all-details .overview {
+  background-color: #FFFFFF;
+  padding: 2rem;
+}
+.package-details-pages .package-all-details .overview .other-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 1rem;
+}
+.package-details-pages .package-all-details .overview .other-info li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.package-details-pages .package-all-details .overview .other-info li .text {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.1rem;
+}
+.package-details-pages .package-all-details .overview .other-info li .text span {
+  font-size: 1rem;
+}
+.package-details-pages .package-all-details .overview .other-info li .icon {
+  height: 3rem;
+  width: 3rem;
+}
+.package-details-pages .package-all-details .overview .other-info li .icon img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.package-details-pages .package-all-details .overview .descriptions {
+  margin: 2rem 0 1rem;
+  line-height: 1.6rem;
+  font-weight: 300;
+  font-size: 0.96rem;
+}
+.package-details-pages .preparation {
+  background-color: #F5F8FC;
+}
+.package-details-pages .preparation .technical-experience {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.package-details-pages .preparation .technical-experience .icon {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #21ACEC;
+}
+.package-details-pages .preparation .technical-experience .icon img {
+  height: 70%;
+  width: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.package-details-pages .preparation .technical-experience .text {
+  width: calc(100% - 5rem);
+}
+.package-details-pages .preparation .technical-experience .text h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.package-details-pages .preparation .technical-experience .text p {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+.package-details-pages .preparation .preparation-filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.package-details-pages .preparation .preparation-filter-buttons .filterBtns {
+  height: 4rem;
+  width: 10rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+.package-details-pages .preparation .preparation-filter-buttons .filterBtns.active {
+  border-color: #21ACEC;
+  background-color: rgba(33, 172, 236, 0.05);
+}
+.package-details-pages .preparation .filter-section {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.package-details-pages .preparation .filter-section.active {
+  position: static;
+  padding: 2rem;
+  opacity: 1;
+  pointer-events: auto;
+}
+.package-details-pages .preparation .filter-section .list li {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.package-details-pages .preparation .filter-section .list li:nth-last-child(1) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.package-details-pages .preparation .filter-section .list li.active .filter-title .icon.rotate {
+  transform: rotate(0);
+}
+.package-details-pages .preparation .filter-section .list li.active .filter-details {
+  max-height: 1000px;
+}
+.package-details-pages .preparation .filter-section .list li .filter-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  color: rgba(20, 20, 20, 0.65);
+}
+.package-details-pages .preparation .filter-section .list li .filter-title span {
+  font-weight: 600;
+  color: #141414;
+}
+.package-details-pages .preparation .filter-section .list li .filter-title .icon {
+  color: #141414;
+  font-size: 1.2rem;
+  transition: 0.4s ease-in-out;
+  margin-right: 0.8rem;
+}
+.package-details-pages .preparation .filter-section .list li .filter-title .icon.rotate {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  transform: rotate(45deg);
+}
+.package-details-pages .preparation .filter-section .list li .filter-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+}
+.package-details-pages .preparation .filter-section .list li .filter-details .details {
+  padding: 0.5rem 1rem 1rem;
+  padding-left: 3rem;
+  font-weight: 300;
+}
+.package-details-pages .popular-trips {
+  background-color: #F5F8FC;
+}
+.package-details-pages .popular-trips .section-title-area {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 1.3px;
+  margin-bottom: 2rem;
+}
+.package-details-pages .popular-trips .popular-trips-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.package-details-pages .popular-trips .popular-trips-list .item .image {
+  height: 12rem;
+  width: 100%;
+}
+.package-details-pages .popular-trips .popular-trips-list .item .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.package-details-pages .popular-trips .popular-trips-list .item .content {
+  background-color: #ffffff;
+}
+.package-details-pages .popular-trips .popular-trips-list .item .content .trip-title {
+  padding: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #21ACEC;
+}
+.package-details-pages .popular-trips .popular-trips-list .item .content button {
+  background: none;
+  padding: 1.5rem;
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.package-details-pages .gallery-section .section-title-area {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 1.3px;
+  margin-bottom: 2rem;
+}
+.package-details-pages .gallery-section .images-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.package-details-pages .gallery-section .image {
+  height: 10rem;
+  width: 100%;
+}
+.package-details-pages .gallery-section .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (max-width: 767px) {
+    .sliderBanner .carousel-inner .container .slide-text {
+        width: 80% !important;
+    }
+    .sliderBanner .carousel-inner .container .slide-text h1 {
+        line-height: 3.5rem !important;
+    }
+    .sliderBanner .carousel-inner>.item>img {
+        height: 250px !important;
+    }
+    .TestPage .container {
+        width: 80% !important;
+    }
+}
+
+@media only screen and (max-width: 463px) {
+    .TestPage .container {
+        width: 100% !important;
+    }
+    .sliderBanner .carousel-inner .container .slide-text {
+        width: 100% !important;
+    }
+    .package-section .item .top-item {
+        height: 30rem !important;
+    }
+    .package-section .item .top-item .content .package-title {
+        font-size: 4.5rem;
+        line-height: 3.5rem;
+    }
+    .package-section .item .top-item .create-button {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+/**
+ * The main template file.
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package sherpa
+ * @since sherpa 0.1
+ */
+
+// File Security Check
+get_header(); ?>
+    <div  class="trip-banner topeight package-details-banner-bg">
+        <!--<img src="<?php the_post_thumbnail_url('full')?>" />-->
+    </div>
+    <div class="container">
+    <!--<div class="fullbox-top">-->
+
+        <!--<div class="content-left">&nbsp;</div>-->
+        <!--<div class="content-right bg dontprint"> Trigger/Open The Modal -->
+            <!--<span id="myBtn">SIGN UP</span>-->
+            <?php //echo $cost=get_field('cost_details');?>
+            <!--</div>-->
+
+    <!--</div>-->
+    
+    <div class="package-details-pages">
+      <div class="wrapper">
+        <div class="package-title-area">
+          <h1 class="package-title">
+            PALISADES TAHOE BACKCOUNTRY TOURS
+          </h1>
+
+          <h4>
+            1 DAY IN CALIFORNIA, LAKE TAHOE / (SKILL LEVEL: INTERMEDIATE)
+          </h4>
+        </div>
+
+        <div class="package-details-section">
+          <div class="image-area">
+            <img
+              src="<?php the_post_thumbnail_url('full')?>"
+              alt=""
+            />
+          </div>
+
+          <div class="package-details-area">
+            <div class="price-sec">
+              <div class="package-sec-title">PRICE PER PERSON</div>
+
+              <div class="price">$219</div>
+
+              <h5>Based on a group of 5 skiers</h5>
+            </div>
+
+            <div class="button-group">
+              <div class="button-area">
+                <a href="#">
+                  <button>Book Now</button>
+                </a>
+
+                <a href="#">
+                  <button>Inquire</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="about-trip">
+              <div class="package-sec-title">ABOUT THIS TRIP</div>
+
+                <div class="about-trip-area">
+                  <ul>
+                    <li class="list-title">Full-Day Rates on Weekdays:</li>
+                    <li>Single: $595</li>
+                    <li>DURATION: <?php echo $duration=get_field('duration');?></li>
+                    <li>ACTIVITY: <?php echo $activity=get_field('activity');?></li>
+                    <li>BEST SEASON: <?php $values = get_field('best_seasons');foreach ($values as $value) {?><?php  echo '/&nbsp;'.$value.'&nbsp;';}?></li>
+                  </ul>
+    
+                  <ul>
+                    <li class="list-title"> Full-Day Rates on Weekends:</li>
+                    <li> Single: $625</li>
+                    <li> START: <?php echo $depart=get_field('departure_from');?></li>
+                    <li> FINISH: <?php echo $ends=get_field('ends_in');?></li>
+                    <li> ACCOMMODATION: <?php echo $accommodation=get_field('accommodation');?></li>
+                  </ul>
+                  
+                  <ul>
+                    <li class="list-title"> Full-Day Rates on Weekends:</li>
+                    <li> GRADE: <span class="static-title-value"><a href="#" class="tooltip-bottom" data-tooltip="
+    					   <?php $grade=get_field('grade');
+                            if($grade=="easy" || $grade=="Easy"){
+                                echo "No need to walk for hours, it may involve short walking on easy trail.";}
+                            if($grade=="moderate" || $grade=="Moderate"){
+                                echo "You may need to walk an average of 5 hours a day therefore a good physical condition is required. You must be ready to accept adventure travel activities during your trip.";}
+                            if($grade=="Hard" || $grade=="hard"){
+                                echo "You may need to walk 5-8 hours a day on high altitude therefore a good physical condition is required. You may need to cross the high passes, for that technical climbing gear is required.";}
+                            if($grade=="Extreme" || $grade=="extreme"){
+                                echo "You may need to walk more than 8-10 hours a day on high altitude therefore a good physical condition is must. Must be ready to accept extreme physical and mental challenges during your trip, unpredictable weather conditions can occur, may need to use technical climbing gears.";}
+                            ?>"><span style="text-transform: uppercase;"><?php echo $grade=get_field('grade');?></span></a></span></li>
+                    <li> AVAIABILITY: <?php echo $availability=get_field('availability');?></li>
+                    <li> GROUP SIZE: <?php echo $gsize=get_field('group_size');?></li>
+                    <li> MAX ALTITUDE: <?php echo $maxal=get_field('max_altitude');?></li>
+                  </ul>
+              </div>
+            </div>
+
+            <div class="contact-info"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="package-main-details">
+        <div class="package-details-bg-image">
+          <img
+            src="https://alpenglowexpeditions.com/wp-content/uploads/2016/09/BG_graniteview.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="package-all-details">
+          <div class="overview">
+            <div class="section-title-area">
+              <h2 class="section-titles">OVERVIEW</h2>
+
+              <ul class="other-info">
+                <li>
+                  <div class="icon">
+                    <img
+                      src="https://alpenglowexpeditions.com/wp-content/themes/alpenglow/images/ico-skill.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text">
+                    <span>SKILL LEVEL</span>
+                    <br />
+                    Intermediate
+                  </div>
+                </li>
+
+                <li>
+                  <div class="icon">
+                    <img
+                      src="https://alpenglowexpeditions.com/wp-content/themes/alpenglow/images/ico-duration.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text">
+                    <span>DURATION</span>
+                    <br />1 day
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <p class="descriptions">
+              By utilizing the extensive lift system of Palisades Tahoe Ski
+              Resort, we can quickly access incredible terrain and get more
+              skiing and riding in. In this program we ski in three distinct
+              zones: Tram Ridge, Nat Geo Bowl and Munchkins. For the first
+              time, this terrain can now be ridden with a guide, opening up
+              lift-accessed riding for skiers and snowboarders and requiring
+              less uphill travel than a normal day touring.
+            </p>
+
+            <p class="descriptions">
+              Each group is private with their own guide. This means you
+              know your group’s pace and skier or rider ability, and you
+              create your day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="fullboxdetails">
+
+        <div class="content-left">
+            <div class="col-md-8"><h1 class="header-txt"><?php echo the_title();?></h1>
+                <!--                    <div class="second-header-txt">From $ --><?php //echo $tcost=get_field('price');?><!--</div>-->
+            </div>
+            <div class="col-md-6">
+                <div><span class="static-title">DURATION:</span><span class="static-title-value"><?php echo $duration=get_field('duration');?></span></div>
+                <div><span class="static-title">ACTIVITY:</span><span class="static-title-value">   <?php echo $activity=get_field('activity');?></span></div>
+                <div><span class="static-title">BEST SEASON:</span><span class="static-title-value">
+                        <?php
+
+                        $values = get_field('best_seasons');
+                        foreach ($values as $value) {
+                            ?><?php  echo '<span style="text-transform:capitalize">/&nbsp;'.$value.'&nbsp;</span>';
+                        }
+                        ?>
+                         </span></div>
+
+            </div>
+            <div class="col-md-6">
+                <div><span class="static-title">START:</span><span class="static-title-value">   <?php echo $depart=get_field('departure_from');?></span></div>
+                <div><span class="static-title">FINISH:</span><span class="static-title-value">   <?php echo $ends=get_field('ends_in');?></span></div>
+                <div><span class="static-title">ACCOMMODATION:</span><span class="static-title-value">   <?php echo $accommodation=get_field('accommodation');?></span></div>
+            </div>
+
+        </div>
+        <div class="content-right">
+            <?php //do_action( 'presscore_before_loop' ); ?>
+            <div class="<?php //echo $value=get_field('trip_level');?>"></div>
+            <div class="col-md-12">
+                <div><span class="static-title"><!--RATING:--></span><span class="static-title-value" style="font-size:22px">
+						<?php
+                        $field = get_field_object('rating');
+                        $value = implode(', ', get_field('rating'));
+                        $label = $field['choices'][ $value ];
+                        //echo $label
+                        if($label==1){
+                            echo '<i class="fa fa-star" aria-hidden="true"></i>';
+                        }
+                        if($label==2){
+                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
+                        }
+                        if($label==3){
+                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
+                        }
+                        if($label==4){
+                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
+                        }
+                        if($label==5){
+                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
+                        }
+
+                        ?>
+                        </span></div>
+                <div><?php $offer=get_field('offer'); if($offer=="1"){
+                        echo "<span style='color:red; font-size:19px!important; text-transform:uppercase;'>Special Offer</span><br/>";} ?>
+                        <span class="static-title">GRADE: </span><span class="static-title-value"><a href="#" class="tooltip-bottom" data-tooltip="
+					   <?php $grade=get_field('grade');
+                        if($grade=="easy" || $grade=="Easy"){
+                            echo "No need to walk for hours, it may involve short walking on easy trail.";}
+                        if($grade=="moderate" || $grade=="Moderate"){
+                            echo "You may need to walk an average of 5 hours a day therefore a good physical condition is required. You must be ready to accept adventure travel activities during your trip.";}
+                        if($grade=="Hard" || $grade=="hard"){
+                            echo "You may need to walk 5-8 hours a day on high altitude therefore a good physical condition is required. You may need to cross the high passes, for that technical climbing gear is required.";}
+                        if($grade=="Extreme" || $grade=="extreme"){
+                            echo "You may need to walk more than 8-10 hours a day on high altitude therefore a good physical condition is must. Must be ready to accept extreme physical and mental challenges during your trip, unpredictable weather conditions can occur, may need to use technical climbing gears.";}
+                        ?>"><span style="text-transform: uppercase;"><?php echo $grade=get_field('grade');?></span></a></span></div>
+                <div><span class="static-title">AVAIABILITY:</span><span class="static-title-value">   <?php echo $availability=get_field('availability');?></span></div>
+                <div><span class="static-title">GROUP SIZE:</span><span class="static-title-value">   <?php echo $gsize=get_field('group_size');?></span></div>
+                <div><span class="static-title">MAX ALTITUDE:</span><span class="static-title-value">   <?php echo $maxal=get_field('max_altitude');?></span></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="bodyWrapper" class="large-screen">
+
+
+
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">X</span>
+                <?php if (function_exists('iphorm')) echo iphorm(3); ?>
+
+            </div>
+
+        </div>
+        <?php //echo do_shortcode('[searchandfilter fields="search,category,post_tag"]'); ?>
+
+        <?php //do_action( 'presscore_before_loop' ); ?>
+
+        <div class="text-label">Trip Information</div>
+        <?php
+        $post_id = $page_id;
+        $queried_post = get_post($post_id);
+        $content = $queried_post->post_content;
+        $content = apply_filters('the_content', $content);
+        $content = str_replace(']]>', ']]&gt;', $content);
+        /*echo "<h4>";
+        the_title();
+        echo "</h4>";*/
+
+
+        //echo the_post_thumbnail();
+
+        echo $content;
+
+        ?>
+        <div class="dontprint"><?php echo do_shortcode('[easy-social-share]');?></div>
+
+        <div class="top-border"></div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="iboxed">
+                    <div class="panel with-nav-tabs panel-default">
+                        <div class="panel-heading">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab1default" data-toggle="tab" aria-expanded="true">Itinerary</a></li>
+                                <?php $dit=get_field('detailed_itinerary'); if( $dit ):?>
+                                <li class=""><a href="#tab2default" data-toggle="tab" aria-expanded="false"> Detailed Itinerary</a></li>
+                                <?php endif;?>
+                                <li class=""><a href="#tab3default" data-toggle="tab" aria-expanded="false">Service Includes</a></li>
+                                <li class=""><a href="#tab4default" data-toggle="tab" aria-expanded="false"> Service Excludes</a></li>
+                                <?php $eqp=get_field('equipments'); if( $eqp ): ?>
+                                <li class=""><a href="#tab5efault" data-toggle="tab" aria-expanded="false"> Equipments</a></li>
+                                <?php endif;?>
+                            </ul>
+                        </div>
+                        <div class="panel-body">
+                            <div class="tab-content">
+                                <div class="tab-pane fade active in" id="tab1default">
+                                    <div class="row">
+                                        <?php $it=get_field('itinerary'); if( $it ): ?>
+                                            <div class="text-label">Itinerary</div>
+                                            <?php echo $value=get_field("itinerary");?>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab2default">
+                                    <div class="row">
+                                        <?php $dit=get_field('detailed_itinerary'); if( $dit ): ?>
+                                            <div class="text-label">Detailed Itinerary</div>
+                                            <?php echo $value=get_field("detailed_itinerary");?>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab3default">
+                                    <div class="row">
+                                        <?php $si=get_field('services_included'); if( $si ): ?>
+                                            <div class="services-include">
+                                                <div class="text-label">Inclusions</div>
+                                                <?php echo $value=get_field("services_included");?>
+                                            </div>
+                                        <?php endif;?>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab4default">
+                                    <div class="row">
+                                        <?php $se=get_field('service_excluded'); if( $se ): ?>
+                                            <div class="services-exclude">
+                                                <div class="text-label">Exclusions</div>
+                                                <?php echo $value=get_field("service_excluded");?>
+                                            </div>
+                                        <?php endif;?>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab5default">
+                                    <div class="row">
+                                        <?php $eqp=get_field('equipments'); if( $eqp ): ?>
+                                            <div class="text-label">Equipments</div>
+                                            <?php echo $value=get_field("equipments");?>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?php $de=get_field('departure_dates'); if( $de ): ?>
+            <div class="services-exclude">
+                <div class="text-label">Departure Dates</div>
+                <?php echo $value=get_field("departure_dates");?>
+            </div>
+        <?php endif;?>
+
+        <!-- Gallery-->
+
+
+        <?php
+
+        $images = get_field('gallery');
+
+        if( $images ): ?>
+            <div class="text-label">Picture Gallery</div>
+            <ul>
+                <?php foreach( $images as $image ): ?>
+                    <li>
+                        <a href="<?php echo $image['url']; ?>">
+                            <img class="gallery-img" src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        </a>
+                        <p><?php echo $image['caption']; ?></p>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+
+        <!-- end of gallery-->
+
+
+        <!-- BOOKING-->
+        <?php if( have_rows('booking') ): ?>
+
+            <ul>
+
+                <?php while( have_rows('booking') ): the_row();
+
+
+                    ?>
+
+                    <li><?php the_sub_field('dates'); ?>, <?php the_sub_field('availability'); ?>, <?php the_sub_field('status'); ?></li>
+                <?php endwhile; ?>
+
+            </ul>
+
+        <?php endif; ?>
+        <!--END OF BOOKING -->
+    </div>
+
+    <!-- Medium Screen-->
+
+    <!-- End of Medium Screen-->
+    <div class="clear"></div>
+
+    <div id="bodyWrapper" class="mobile-screen dontprint">
+        <div class="content-bg">
+            <div class="row">
+                <div class="col-md-12 col-sm-12"><h1 class="header-txt"><?php echo the_title();?></h1>
+                    <div class="second-header-txt"> Trip Code <?php echo $tcode=get_field('trip_code');?></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div><span class="static-title">DURATION:</span><span class="static-title-value"><?php echo $duration=get_field('duration');?></span></div>
+                    <div><span class="static-title">ACTIVITY:</span><span class="static-title-value">   <?php echo $activity=get_field('activity');?></span></div>
+                    <div><span class="static-title">SEASON:</span><span class="static-title-value">
+                        <?php
+
+                        $values = get_field('best_seasons');
+                        foreach ($values as $value) {
+                            ?><?php  echo '<span style="text-transform:capitalize">/&nbsp;'.$value.'&nbsp;</span>';
+                        }
+                        ?>
+                         </span></div>
+
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div><span class="static-title">START:</span><span class="static-title-value">   <?php echo $depart=get_field('departure_from');?></span></div>
+                    <div><span class="static-title">FINISH:</span><span class="static-title-value">   <?php echo $ends=get_field('ends_in');?></span></div>
+                    <div><span class="static-title">ACCOMMODATION:</span><span class="static-title-value">   <?php echo $accommodation=get_field('accommodation');?></span></div>
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div><?php $offer=get_field('offer'); if($offer=="1"){
+                                echo "<span style='color:red; font-size:19px!important'>Special Offer</span><br/>";} ?><span class="static-title">GRADE: </span><span class="static-title-value"><a href="#" class="tooltip-bottom" data-tooltip="
+					   <?php $grade=get_field('grade');
+                                if($grade=="easy" || $grade=="Easy"){
+                                    echo "No need to walk for hours, it may involve short walking on easy trail.";}
+                                if($grade=="moderate" || $grade=="Moderate"){
+                                    echo "You may need to walk an average of 5 hours a day therefore a good physical condition is required. You must be ready to accept adventure travel activities during your trip.";}
+                                if($grade=="Hard" || $grade=="hard"){
+                                    echo "You may need to walk 5-8 hours a day on high altitude therefore a good physical condition is required. You may need to cross the high passes, for that technical climbing gear is required.";}
+                                if($grade=="Extreme" || $grade=="extreme"){
+                                    echo "You may need to walk more than 8-10 hours a day on high altitude therefore a good physical condition is must. Must be ready to accept extreme physical and mental challenges during your trip, unpredictable weather conditions can occur, may need to use technical climbing gears.";}
+                                ?>"><span style="text-transform: uppercase;"><?php echo $grade=get_field('grade');?></span></a></span></div>
+                        <div><span class="static-title">AVAIABILITY:</span><span class="static-title-value">   <?php echo $availability=get_field('availability');?></span></div>
+                        <div><span class="static-title">GROUP SIZE:</span><span class="static-title-value">   <?php echo $gsize=get_field('group_size');?></span></div>
+                        <div><span class="static-title">MAX ALTITUDE:</span><span class="static-title-value">   <?php echo $maxal=get_field('max_altitude');?></span></div>
+
+                        <div><span class="static-title"><!--RATING:--></span><span class="static-title-value" style="font-size:19px">
+						<?php
+                        $field = get_field_object('rating');
+                        $value = implode(', ', get_field('rating'));
+                        $label = $field['choices'][ $value ];
+                        //echo $label
+                        if($label==1){
+                            echo '<i class="fa fa-star" aria-hidden="true"></i>';
+                        }
+                        if($label==2){
+                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
+                        }
+                        if($label==3){
+                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
+                        }
+                        if($label==4){
+                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
+                        }
+                        if($label==5){
+                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
+                        }
+
+                        ?>
+                        </span></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-border"></div>
+        <div class="text-label">Overview</div>
+        <?php
+        $post_id = $page_id;
+        $queried_post = get_post($post_id);
+        $content = $queried_post->post_content;
+        $content = apply_filters('the_content', $content);
+        $content = str_replace(']]>', ']]&gt;', $content);
+        /* echo "<h4>";
+         the_title();
+         echo "</h4>";*/
+        echo $content;
+
+        ?>
+        <?php echo do_shortcode('[easy-social-share]');?>
+        <div class="top-border"></div>
+        <div class="text-label">Itinerary</div>
+        <?php echo $value=get_field("itinerary");?>
+        <div class="top-border"></div>
+        <?php $dit=get_field('detailed_itinerary'); if( $dit ): ?>
+            <div class="text-label">Detailed Itinerary</div>
+            <?php echo $value=get_field("detailed_itinerary");?>
+        <?php endif; ?>
+        <div class="top-border"></div>
+
+        <div class="services-include">
+            <div class="text-label">Inclusions</div>
+            <?php echo $value=get_field("services_included");?>
+        </div>
+
+        <div class="services-exclude">
+            <div class="text-label">Exclusions</div>
+            <?php echo $value=get_field("service_excluded");?>
+        </div>
+        <div class="top-border"></div>
+        <?php $eqp=get_field('equipments'); if( $eqp ): ?>
+        <div class="text-label">Equipments</div>
+            <?php echo $value=get_field("equipments");?>
+            <?php endif; ?>
+            <?php $de=get_field('departure_dates'); if( $de ): ?>
+                <div class="services-exclude">
+                    <div class="text-label">Departure Dates</div>
+                    <?php echo $value=get_field("departure_dates");?>
+                </div>
+            <?php endif;?>
+
+            <div class="top-border"></div>
+            <div class="text-label">ASK FOR QUOTE</div>
+            <?php if (function_exists('iphorm')) echo iphorm(3); ?>
+
+
+        </div>
+    </div>
+    <div id="bodyWrapper" class="run fullbox dontprint">
+        <div class="heading_txt">
+            <h4><span style="font-size:16px!important; color:#3CF; margin-left:5px;">POPULAR TRIPS</span></h4>
+            <h3 class="sub-heading-title" style="color:#e46d33!important;">You may like to see other similar treks...</h3>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="fullbox whitebg dontprint">
+            <div class="row">
+
+                <?php
+
+                global $post;
+                $cat_ID=array();
+                $categories = get_the_category(); //get all categories for this post
+                foreach($categories as $category) {
+                    array_push($cat_ID,$category->cat_ID);
+                }
+                $args = array(
+                    'orderby' => 'date',
+                    'order' => 'DESC',
+                    'post_type' => 'trekking',
+                    'numberposts' => 4,
+                    'post__not_in' => array($post->ID),
+                    'category__in' => $cat_ID
+                );
+                //echo $category_link = $category->cat_ID;
+                // echo '<div>'. $category->cat_name.'</div>';
+                $cat_posts = get_posts($args);
+                $out='';
+                //$offer=get_field('offer', $cat_post->ID)
+                foreach($cat_posts as $cat_post) {
+                    $offer=get_field('offer',$cat_post->ID);
+                    echo '
+					  	<div class="col-md-3 col-sm-12">
+							<div class="colimg"><a href="'.get_permalink($cat_post->ID).'" title="'.wptexturize($cat_post->post_title).'">'. get_the_post_thumbnail($cat_post->ID,'large' ).'</a>'.$offers = ($offer == 1 ? '<div class="offer offer-new"></div>': '').'</div>
+							<h4 style="text-align: center; padding-top: 10px;"><a href="'.get_permalink($cat_post->ID).'" title="'.wptexturize($cat_post->post_title).'">'.wptexturize($cat_post->post_title).'</a></h4><div style="text-align: center; margin-top:-13px; margin-bottom:5px; font-size:19px!important;">'.$duration=get_field('duration', $cat_post->ID).'</div></div>';
+                }
+
+                //echo $out;
+                ?></div></div></div>
+
+
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByclass("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        
+        const filterSections = document.querySelectorAll(".filter-section");
+        const filterBtns = document.querySelectorAll(".filterBtns");
+    
+        const check = (id) => {
+          filterSections.forEach((filterSection, idx) => {
+            const dataId = filterSection.getAttribute("id");
+    
+            if (dataId === id) {
+              filterSection.classList.add("active");
+              filterBtns[idx].classList.add("active");
+            } else {
+              filterSection.classList.remove("active");
+              filterBtns[idx].classList.remove("active");
+            }
+          });
+        };
+    
+        filterBtns.forEach((filterBtn) => {
+          filterBtn.addEventListener("click", (e) => {
+            check(e.target.getAttribute("data-filter"));
+          });
+        });
+    
+        const filterTitles = document.querySelectorAll(".filterTitle");
+        const filterDetails = document.querySelectorAll(".filterDetails");
+    
+        filterTitles.forEach((filterTitle, idx) => {
+          filterTitle.addEventListener("click", () => {
+            filterDetails[idx].classList.toggle("active");
+          });
+        });
+    </script>
+
+<?php get_footer(); ?>
