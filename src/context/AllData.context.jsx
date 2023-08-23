@@ -86,9 +86,9 @@ export const AllDataProvider = ({ children }) => {
       .then((res) => {
         if (res.status === 200) {
           setTripDatas(res.data.data);
-          setCountPackage(res.data.data.length);
+          setCountPackage(res.data.data?.length);
           // console.log("trip: ");
-          console.log(res.data.data);
+          // console.log(res.data.data);
         }
       })
       .catch((err) => {

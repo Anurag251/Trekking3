@@ -2,8 +2,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
-import { Autoplay } from "swiper";
+import { Autoplay, EffectFade } from "swiper";
 
 import { useContext, useState } from "react";
 import { AllDataContext } from "../context/AllData.context";
@@ -91,22 +92,26 @@ const BannerComponent = () => {
     <div className="banner">
       <Swiper
         slidesPerView={1}
+        effect="fade"
         centeredSlides={true}
         speed={1000}
         autoplay={{
           delay: 7500,
           disableOnInteraction: false,
         }}
-        modules={[Autoplay]}
+        modules={[Autoplay, EffectFade]}
         className="mySwiper"
       >
-        {bannerDatas &&
+        {/* bannerDatas &&
           bannerDatas.map((data, idx) => (
             <SwiperSlide key={idx}>
-              <div
-                className="item"
-                style={{ backgroundImage: `url(${data.image.original_image})` }}
-              >
+              <div className="item">
+                <div className="slider-image">
+                  <img
+                    src="https://images.pexels.com/photos/11568270/pexels-photo-11568270.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="slide-image"
+                  />
+                </div>
                 <div className="wrapper">
                   <div className="content-area">
                     <h2>{data.title}</h2>
@@ -115,7 +120,58 @@ const BannerComponent = () => {
                 </div>
               </div>
             </SwiperSlide>
-          ))}
+          )) */}
+
+        <SwiperSlide>
+          <div className="item">
+            <div className="slider-image">
+              <img
+                src="https://images.pexels.com/photos/11568270/pexels-photo-11568270.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="slide-image"
+              />
+            </div>
+            <div className="wrapper">
+              <div className="content-area">
+                <h2>Trekking In Nepal</h2>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="item">
+            <div className="slider-image">
+              <img
+                src="https://images.pexels.com/photos/352093/pexels-photo-352093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="slide-image"
+              />
+            </div>
+            <div className="wrapper">
+              <div className="content-area">
+                <h2>Mountain Climbing</h2>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="item">
+            <div className="slider-image">
+              <img
+                src="https://images.pexels.com/photos/804573/pexels-photo-804573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="slide-image"
+              />
+            </div>
+            <div className="wrapper">
+              <div className="content-area">
+                <h2>Mount Everest Trekking</h2>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );

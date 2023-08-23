@@ -1,13 +1,13 @@
 @use '../layout/_grid' as *
 @use '../helpers/_variables' as *
 @use '../helpers/_mixin' as *
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
 
 *
   margin: 0
   padding: 0
   box-sizing: border-box
-  font-family: 'Nunito', sans-serif
+  font-family: 'Lato', sans-serif
   border: none
   outline: none
   background: none
@@ -22,13 +22,18 @@ body
 
 section
   padding: 60px 0
-  border-bottom: 1px solid rgba($dark, .2)
 
   &.other-page
     padding-top: 3rem
 
   &.bg-color
     background-color: #ffffff
+
+  &.testinomialBg
+    background-color: $darkBg
+
+.header-hidden
+  height: 104px
 
 .wrapper
   max-width: 1400px
@@ -231,3 +236,11 @@ section
 
   &.show
     right: 1rem
+
+.view-all
+  @include flex($justify: center)
+  margin-top: 2rem
+
+  button
+    @include customButton($bgcolor: $pri, $color: $light)
+    font-size: 1.2rem

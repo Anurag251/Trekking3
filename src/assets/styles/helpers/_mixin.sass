@@ -1,7 +1,6 @@
 @use '../layout/_grid' as *
 @use '../helpers/_variables' as *
 
-
 @mixin bgImage()
   background-position: center
   background-size: cover
@@ -38,17 +37,16 @@
 @mixin customButton($bgcolor, $color)
   @include flex($justify: center)
   padding: .5rem 1.5rem
-  box-shadow: 0 0 0 3em $bgcolor inset
   font-size: 14px
   color: $color
   cursor: pointer
-  border: 1.5px solid $bgcolor
-  @include trans()
-  background: #ffffff
+  @include fastTrans()
+  background: $bgcolor
+  border-radius: .3rem
 
   &:hover
-    box-shadow: 0 0 0 0 $bgcolor inset
-    color: $bgcolor
+    box-shadow: 0 0 10px rgba($bgcolor, .6)
+    transform: scale(1.03)
 
   &.active
     pointer-events: none

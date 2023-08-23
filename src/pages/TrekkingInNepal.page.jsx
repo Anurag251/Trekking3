@@ -12,7 +12,7 @@ const TrekkingInNepalPage = () => {
   return (
     <div className="TrekkingInNepalPage">
       <PageBannerComponent image="https://i.assetzen.net/i/JPlzqpfxRxey/w:1920/h:600/q:70.webp">
-        trekking In Nepal
+        Our Tour Package
       </PageBannerComponent>
 
       <div className="AdVentuRes">
@@ -20,20 +20,9 @@ const TrekkingInNepalPage = () => {
           <div className="wrapper">
             <div className="list">
               {tripDatas &&
-                tripDatas
-                  .map((data, idx) => (
-                    <NewPackageCardComponent key={idx} data={data} />
-                  ))}
-            </div>
-
-            <div className="package-footer">
-              <h2>
-                Secure your <span>lifetime deposit</span> today
-              </h2>
-
-              <p>
-                Book onto a TREK. Once you pay your deposit, it NEVER expires!
-              </p>
+                tripDatas.map((data, idx) => (
+                  <NewPackageCardComponent key={idx} data={data} />
+                ))}
             </div>
           </div>
         </section>

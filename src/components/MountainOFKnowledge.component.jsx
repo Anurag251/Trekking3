@@ -1,75 +1,92 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const MountainOFKnowledgeComponent = () => {
+const MountainOFKnowledgeComponent = ({ title, subTitle, link }) => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    if (title === "DESTINATIONS") {
+      setData([
+        {
+          image:
+            "https://images.pexels.com/photos/732895/pexels-photo-732895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          name: "Nepal",
+        },
+        {
+          image:
+            "https://images.pexels.com/photos/5728647/pexels-photo-5728647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          name: "Bhutan",
+        },
+        {
+          image:
+            "https://images.pexels.com/photos/5204945/pexels-photo-5204945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          name: "Tibet",
+        },
+        {
+          image:
+            "https://images.pexels.com/photos/1007427/pexels-photo-1007427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          name: "India",
+        },
+      ]);
+    }
+
+    if (title === "EXPEDITION") {
+      setData([
+        {
+          image:
+            "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          name: "Over 8000 Meters",
+        },
+        {
+          image:
+            "https://8kexpeditions.com/uploads/packages/package-1639995142.jpg",
+          name: "Over 7000 Meters",
+        },
+        {
+          image:
+            "https://8kexpeditions.com/uploads/packages/package-1632986680.jpg",
+          name: "Over 6000 Meters",
+        },
+        {
+          image:
+            "https://8kexpeditions.com/uploads/packages/package-1639910405.jpg",
+          name: "Peak Climbing",
+        },
+      ]);
+    }
+  }, [title]);
+
   return (
     <div className="MountainOFKnowledge">
-      <section>
+      <section className="bg-color">
         <div className="wrapper">
           <div className="title-part">
-            <h5>CHECK OUT OUR</h5>
-
-            <div className="name">Mountain of Knowledge</div>
+            <div className="name">{title}</div>
+            <h5>{subTitle}</h5>
           </div>
 
           <div className="list">
-            <Link to="/blogging">
-              <div className="item">
-                <div className="image-area">
-                  <img
-                    src="https://i.assetzen.net/i/7qEXqCd7V6TI/w:500/h:500/q:70.webp"
-                    alt=""
-                  />
-                </div>
+            {data.map((data, idx) => (
+              <Link to="/destination-details/nepal" key={idx}>
+                <div className="item">
+                  <div className="image-area">
+                    <img src={data.image} alt="" />
+                  </div>
 
-                <div className="content">
-                  <div className="name">podcast</div>
-                  <p className="desc">
-                    Listen to our latest ramblings on the monthly podcast
-                    episodes!
-                  </p>
+                  <div className="content">
+                    <div className="name">{data.name}</div>
+                  </div>
                 </div>
-              </div>
-            </Link>
-
-            <Link to="/blogging">
-              <div className="item">
-                <div className="image-area">
-                  <img
-                    src="https://i.assetzen.net/i/7qEXqCd7V6TI/w:500/h:500/q:70.webp"
-                    alt=""
-                  />
-                </div>
-
-                <div className="content">
-                  <div className="name">Knowledge centre</div>
-                  <p className="desc">
-                    All of your questions and concerns answered in plain, no
-                    nonsense english.
-                  </p>
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/blogging">
-              <div className="item">
-                <div className="image-area">
-                  <img
-                    src="https://i.assetzen.net/i/7qEXqCd7V6TI/w:500/h:500/q:70.webp"
-                    alt=""
-                  />
-                </div>
-
-                <div className="content">
-                  <div className="name">blog</div>
-                  <p className="desc">
-                    Read our latest blog articles, straight from experts of the
-                    mountains!
-                  </p>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            ))}
           </div>
+        </div>
+
+        <div className="view-all">
+          <Link to={link}>
+            <button>View All</button>
+          </Link>
         </div>
       </section>
     </div>

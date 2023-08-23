@@ -16,6 +16,7 @@ import HelpfulYetisComponent from "../components/HelpfulYetis.component";
 import DownloadTripGuideComponent from "../components/DownloadTripGuide.component";
 import AboutSacredComponent from "../components/AboutSacred.component";
 import SearchBoxComponent from "../components/SearchBox.component";
+import VideoBannerComponent from "../components/VideoBanner.component";
 
 const HomePage = () => {
   return (
@@ -26,13 +27,32 @@ const HomePage = () => {
 
       <AboutSacredComponent />
 
-      <AdVentuResComponent />
+      <AdVentuResComponent
+        title="Best Selling"
+        subTitle="OUR BEST SELLING PACKAGES"
+      />
 
-      <MountainOFKnowledgeComponent />
+      <MountainOFKnowledgeComponent
+        title="DESTINATIONS"
+        subTitle="BEST DESTINATIONS TO TRAVEL IN SOUTH ASIA"
+        link="/destination"
+      />
 
-      <WhatOurCustomersSaysComponent />
+      <AdVentuResComponent title="TOURS" subTitle="Luxury Tours in Nepal" />
+
+      <MountainOFKnowledgeComponent
+        title="EXPEDITION"
+        subTitle="Yala Peak Climbing | Peak Climbing In Nepal |"
+        link="/expedition"
+      />
 
       <SacredCommunityComponent />
+
+      <VideoBannerComponent />
+
+      <WhyChooseUsComponent />
+
+      <TestinomialComponent />
 
       <HelpfulYetisComponent />
 

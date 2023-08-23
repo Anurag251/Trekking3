@@ -7,13 +7,12 @@ const SacredCommunityComponent = () => {
   const { blogDatas } = useContext(AllDataContext);
 
   return (
-    <div className="SacredCommunity">
+    <div className="blog_page">
       <section>
         <div className="wrapper">
           <div className="title-part">
-            <h5>READ WHAT'S HAPPENING IN THE</h5>
-
-            <div className="name">sacred community</div>
+            <div className="name">From Our Blog</div>
+            <h5>Our Latest News and Promotions</h5>
           </div>
 
           <div className="list">

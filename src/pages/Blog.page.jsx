@@ -9,11 +9,11 @@ const BlogPage = () => {
     <section className="other-page">
       <div className="wrapper">
         <div className="news-events">
-          <div className="title">Sacred Himalaya community</div>
+          <div className="title">Latest Blog </div>
 
           <div className="list">
             {blogDatas &&
-              blogDatas.map((data, idx) => {
+              blogDatas?.map((data, idx) => {
                 return <BlogCardComponent key={idx} data={data} />;
               })}
           </div>

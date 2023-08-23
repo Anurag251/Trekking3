@@ -2,6 +2,77 @@
 @use '../layout/_grid' as *
 @use '../helpers/_variables' as *
 
+@media only screen and (max-width: 2000px)
+  .NavigateButtons
+    top: 4rem
+    .button-list
+      display: none
+
+  .TripOverview
+    margin-top: 3rem
+
+  .TripOverview, .ItinerarySection, .DateAndPriceSection, .MoreInfoSection
+    opacity: 1 !important
+    height: 100% !important
+    pointer-events: auto
+    background: none !important
+
+    section
+      padding: 0
+      border: 0
+
+  .MoreInfoSection
+    .inner-details-button
+      border-bottom: none
+
+  .inner-details-button
+    background-color: $light
+    border-bottom: 1px solid rgba($dark, .3)
+
+    &.show-details
+      .main-title
+        background-color: $pri
+        color: $light !important
+
+        i
+          transform: rotate(-180deg)
+
+      .inner-details
+        grid-template-rows: 1fr
+
+        .main-container
+          padding: 1rem
+          margin-top: .7rem
+
+    .main-title
+      @include flex($justify: space-between)
+      font-size: 1.4rem
+      font-weight: 500
+      padding: 1rem
+      cursor: pointer
+      transition: .4s
+
+      i
+        transition: .4s
+        display: block
+
+      &:hover
+        color: $pri
+
+    .inner-details
+      display: grid
+      grid-template-rows: 0fr
+      transition-property: grid-template-rows
+      transition-timing-function: cubic-bezier(.4,0,.2,1)
+      transition-duration: .4s
+
+      .main-container
+        overflow: hidden
+        border: none
+        padding: 0 1rem
+        margin-top: 0
+        transition-duration: .4s
+
 @media only screen and ( max-width:  1300px)
   .wrapper
     max-width: 1200px
@@ -22,7 +93,7 @@
     .list
       grid-template-columns: 1fr 1fr
 
-  .SacredCommunity
+  .blog_page
     .list
       grid-template-columns: 1fr 1fr
 
@@ -280,7 +351,7 @@
     .list
       grid-template-columns: 1fr
 
-  .SacredCommunity
+  .blog_page
     .list
       grid-template-columns: 1fr
 
@@ -430,7 +501,7 @@
 
     .main-title
       @include flex($justify: space-between)
-      font-size: 1.4rem
+      font-size: 1.2rem
       font-weight: 500
       padding: 1rem
       cursor: pointer
@@ -517,6 +588,25 @@
 
               button
                 position: static
+
+  .package-search-area
+    padding: 0
+
+    .package-search
+      @include flex($justify: center)
+      flex-direction: column
+
+      .group
+        &::after
+          height: 1px
+          width: 100%
+          left: 0
+          top: 0%
+          transform: translateY(0%)
+
+      button
+        width: 100%
+        border-radius: 4px
 
 @media only screen and ( max-width:  600px)
   .wrapper

@@ -14,12 +14,20 @@ const AboutSacredComponent = () => {
   const { aboutDetails } = useContext(AllDataContext);
 
   return (
-    <div className="AboutSacred">
-      <section>
+    <div className="About_us">
+      <section className="bg-color">
         <div className="wrapper">
           <div className="item">
+            <div className="images-area">
+              <img
+                src="https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+              />
+            </div>
+
             <div className="content">
-              <p
+              <h1>About Sherpa-Tech</h1>
+              {/* <p
                 className="desc"
                 dangerouslySetInnerHTML={{
                   __html:
@@ -29,86 +37,22 @@ const AboutSacredComponent = () => {
                         : aboutDetails[1].description
                       : "",
                 }}
+              /> */}
+
+              <p
+                className="desc"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "Towering high above Nepal, Tibet and Bhutan are the majestic Himalayan Mountains, home to the highest and most magnificent peaks on earth. To the people of the region, these mountains are sacred. Most know of Everest, the highest peak on the planet. <br> <br> A peak conquered for the first time in 1953 by Sir  Edmund Hillary and Tenzing Towering high above Nepal, Tibet and Bhutan are the majestic Himalayan Mountains, home to the highest and most magnificent peaks on earth. To the people of the region, these mountains are sacred. Most know of Everest, the highest peak on the planet. A peak conquered for the first time in 1953 by Sir  Edmund Hillary and Tenzing <br /> <br /> Towering high above Nepal, Tibet and Bhutan are the majestic Himalayan Mountains...",
+                }}
               />
 
               <div className="button-group">
-                <Link to="/reasons-to-choose-us">
-                  <button>Why Choose Sacred?</button>
-                </Link>
-
-                <Link to="/destinations">
-                  <button>View Destinations</button>
+                <Link to="/about-us">
+                  <button>Why Choose Sherpa Tech?</button>
                 </Link>
               </div>
             </div>
-
-            <Swiper
-              slidesPerView={1}
-              centeredSlides={true}
-              effect={"fade"}
-              loop={true}
-              speed={1000}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-              }}
-              modules={[Autoplay, EffectFade]}
-              className="mySwiper"
-            >
-              <SwiperSlide>
-                <div className="image-area">
-                  <img
-                    src="https://stnepal.com.np/trekking/public/images/20230525053219_original_11.webp"
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="image-area">
-                  <img
-                    src="https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="image-area">
-                  <img
-                    src="https://images.pexels.com/photos/1311527/pexels-photo-1311527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="image-area">
-                  <img
-                    src="https://stnepal.com.np/trekking/public/images/20230525053219_original_11.webp"
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="image-area">
-                  <img
-                    src="https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="image-area">
-                  <img
-                    src="https://images.pexels.com/photos/1311527/pexels-photo-1311527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
-            </Swiper>
           </div>
         </div>
       </section>

@@ -1,29 +1,24 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import PageBannerComponent from "../components/PageBanner.component";
-import { Link, useLocation } from "react-router-dom";
-import BloggingCardComponent from "../components/Blogging/BloggingCard.component";
-import BloggingBigCardComponsnt from "../components/Blogging/BloggingBigCard.componsnt";
+import { useLocation } from "react-router-dom";
 import { AllDataContext } from "../context/AllData.context";
 import NewPackageCardComponent from "../components/NewPackageCard.component";
 
-import nepalImage from "../assets/images/nepal.webp";
-import bhutanImage from "../assets/images/bhutan.jpeg";
-import tibetImage from "../assets/images/tibet.jpeg";
 import LoadingComponent from "../components/Loading.component";
 
-const DestinationDetailsPage = () => {
-  const { tripDatas, countryDatas } = useContext(AllDataContext);
+const ExpeditionDetailsPage = () => {
+  const { categoriesDatas } = useContext(AllDataContext);
   const [selectedData, setSelectedData] = useState(null);
 
   const location = useLocation();
 
   useEffect(() => {
-    countryDatas?.forEach((data) => {
-      if (data.country_name.toLowerCase() === location.pathname.split("/")[2]) {
+    categoriesDatas?.forEach((data) => {
+      if (data.id === parseInt(location.pathname.split("/")[2])) {
         setSelectedData(data);
       }
     });
-  }, [countryDatas, location.pathname]);
+  }, [categoriesDatas, location.pathname]);
 
   return (
     <div className="ToursInNepalPage">
@@ -41,25 +36,19 @@ const DestinationDetailsPage = () => {
         Trekking Package in {location.pathname.split("/")[2]}
       </PageBannerComponent> */}
 
-      <PageBannerComponent image={selectedData?.icon}>
-        Trekking Package in {selectedData?.country_name}
+      <PageBannerComponent image={selectedData?.image?.original_image}>
+        Trekking Package in {selectedData?.category_name}
       </PageBannerComponent>
 
       <div className="AdVentuRes">
         <section>
           <div className="wrapper">
             <div className="list">
-              {tripDatas !== null ? (
-                tripDatas.length !== 0 ? (
-                  tripDatas
-                    .filter(
-                      (data) =>
-                        data.country.toLowerCase() ===
-                        location.pathname.split("/")[2]
-                    )
-                    .map((data, idx) => (
-                      <NewPackageCardComponent key={idx} data={data} />
-                    ))
+              {selectedData !== null ? (
+                selectedData?.trips?.length !== 0 ? (
+                  selectedData?.trips?.map((data, idx) => (
+                    <NewPackageCardComponent key={idx} data={data} />
+                  ))
                 ) : (
                   <h3>No Data Found</h3>
                 )
@@ -74,4 +63,4 @@ const DestinationDetailsPage = () => {
   );
 };
 
-export default DestinationDetailsPage;
+export default ExpeditionDetailsPage;

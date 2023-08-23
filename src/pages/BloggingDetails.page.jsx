@@ -43,7 +43,7 @@ const BloggingDetailsPage = () => {
             />
           </div>
           <div className="blogging-search-area">
-            <div className="blogging-search">
+            {<div className="blogging-search">
               <div className="filter-keyword-sec">
                 <div className="filter-title">Previous Articles</div>
                 <ul className="all-bloggign-links">
@@ -55,7 +55,7 @@ const BloggingDetailsPage = () => {
                     ))}
                 </ul>
               </div>
-            </div>
+            </div>}
 
             {/*  <div className="blogging-search">
               <div className="filter-keyword-sec">

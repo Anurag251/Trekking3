@@ -1,6 +1,6 @@
 import HeaderComponent from "./components/Header.component";
 import "./assets/styles/main.sass";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import HomePage from "./pages/Home.Page";
 import FooterComponent from "./components/Footer.component";
 import { PackageDetails } from "./pages/PackageDetails.page";
@@ -32,6 +32,13 @@ import TrekkingInNepalPage from "./pages/TrekkingInNepal.page";
 import ToursInNepalPage from "./pages/ToursInNepal.page";
 import DestinationDetailsPage from "./pages/DestinationDetails.page";
 import ExpeditionsPage from "./pages/Expeditions.page";
+import CertificatesPartnersComponent from "./components/CertificatesPartners.component";
+import NotFound from "./pages/NotFound.page";
+import TestinomialComponent from "./components/Testinomial.component";
+import DestinationPage from "./pages/Destination.page";
+import ExpeditionPage from "./pages/Expedition.page";
+import SearchedDataPage from "./components/PackageList.component";
+import ExpeditionDetailsPage from "./pages/ExpeditionDetails.page";
 
 function App() {
   const { loading, contactPopup, setContactPopup } = useContext(AllDataContext);
@@ -92,28 +99,51 @@ function App() {
 
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/details/:id" element={<PackageDetails />} />
-            <Route path="/Knowledge" element={<BlogPage />} />
-            <Route path="/packages" element={<AllPackagePage />} />
-            <Route path="/search" element={<SearchPage />} />
-            <Route path="/blog-details/:id" element={<BlogDetailsPage />} />
 
-            <Route path="/about" element={<AboutPage />} />
+            <Route path="/packages" element={<AllPackagePage />} />
+
+            <Route path="/destination" element={<DestinationPage />} />
+
+            <Route path="/expedition" element={<ExpeditionPage />} />
+
+            <Route path="/tour" element={<TrekkingInNepalPage />} />
 
             <Route
-              path="/reasons-to-choose-us"
-              element={<ReasonsToChooseUsPage />}
+              path="/destination-details/:id"
+              element={<DestinationDetailsPage />}
             />
 
-            <Route path="/destinations" element={<DestinationsPage />} />
-            <Route path="/expeditions" element={<ExpeditionsPage />} />
+            <Route
+              path="/expedition-details/:id"
+              element={<ExpeditionDetailsPage />}
+            />
+
+            <Route path="/search" element={<SearchedDataPage />} />
 
             <Route
               path="/package-details/:id"
               element={<NewPackageDetailsComponent />}
             />
-
             <Route path="/search-page" element={<SearchedPackagePage />} />
+
+            <Route
+              path="/about-us"
+              element={<ReasonsToChooseUsPage />}
+            />
+
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog-details/:id" element={<BlogDetailsPage />} />
+            <Route path="/meet-the-team" element={<MeetTheTeamPage />} />
+            {/* <Route path="/details/:id" element={<PackageDetails />} />
+            <Route path="/searchs" element={<SearchPage />} />
+
+            <Route path="/about" element={<AboutPage />} />
+
+
+            <Route path="/destinations" element={<DestinationsPage />} />
+            <Route path="/expeditions" element={<ExpeditionsPage />} />
+
+
 
             <Route
               path="/trekking-in-nepal"
@@ -127,7 +157,6 @@ function App() {
               path="/blogging-details/:id"
               element={<BloggingDetailsPage />}
             />
-            <Route path="/meet-the-team" element={<MeetTheTeamPage />} />
             <Route
               path="/flexibility-promise"
               element={<FlexibilityPromisePage />}
@@ -143,21 +172,14 @@ function App() {
               element={<DestinationDetailsPage />}
             />
 
-            <Route path="/test-pages" element={<TestPage />} />
+            <Route path="/test-pages" element={<TestPage />} /> */}
+
+            <Route path="*" element={<HomePage />} />
           </Routes>
 
-          <div className="mountain-image">
-            <img
-              src="https://i.assetzen.net/i/WAlfeddC2PDL/w:1920/h:894/q:70.webp"
-              alt=""
-            />
-          </div>
-
-          <WhyChooseUsComponent />
-
-          {location.pathname === "/" ? <BreconMountainRescueComponent /> : null}
-
           <HaveChatComponent />
+
+          {/* <TestinomialComponent /> */}
 
           <FooterComponent />
 

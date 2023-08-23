@@ -4,41 +4,78 @@
 
 .title-part
   text-align: center
+  margin-bottom: 2.5rem
+
   h5
-    font-size: 18px
-    font-weight: 300
-    margin: .5rem 0
+    font-size: .9rem
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 2px
 
   .name
-    font-weight: 600
+    font-weight: 300
     font-size: 2rem
     text-transform: uppercase
+    margin-bottom: .3rem
+
     // font-family: 'Old Growth', sans-serif
 
 .why-choose-us
-  background-color: $darkBg
-
   .title-part
-    color: $light
+    color: $dark
 
   .list
     @include grid($columns: 1fr 1fr 1fr 1fr)
+    grid-gap: 2rem
     margin-top: 2rem
 
     .item
       text-align: center
+      @include flex($justify: center)
+      flex-direction: column
+      position: relative
+      height: 20rem
+      width: 100%
+
+      &:hover
+        &::after
+          @include dark($opacity: .5)
+          backdrop-filter: blur(10px)
+
+      &::after
+        content: ''
+        @include dark($opacity: .3)
+        backdrop-filter: blur(0)
+        transition: .4s
+
+      .image
+        height: 100%
+        width: 100%
+
+        img
+          @include image()
+
+      .content
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 2
 
       i
         font-size: 3rem
-        color: #2295CC
-        margin-bottom: 2rem
+        color: $light
+        margin-bottom: 1.6rem
+        @include flex($justify: center)
 
       .name
-        font-size: 1rem
-        text-transform: uppercase
-        font-weight: 500
+        font-size: 1.1rem
+        font-weight: 600
+        text-transform: capitalize
         color: $light
         margin-bottom: 1rem
+        max-width: 10rem
+        line-height: 1.6rem
 
         &:nth-child(3)
           font-style: italic
@@ -76,7 +113,7 @@
       text-align: center
 
       .desc
-        margin: 1.5rem 0
+        margin: 0 0 1.5rem
 
       .button-group
         @include flex($justify: center)
@@ -90,11 +127,10 @@
           gap: 8px
           cursor: pointer
 
-.SacredCommunity
-  background-color: $darkBg
+.blog_page
 
   .title-part
-    color: $light
+    color: $dark
 
   .list
     @include grid($columns: 1fr 1fr 1fr)
@@ -135,17 +171,17 @@
 
       button
         width: 100%
-        @include customButton($bgcolor: $light, $color: $pri)
+        @include customButton($bgcolor: $pri, $color: $light)
         border: 2px solid $pri
         background-color: $pri
 
 .MountainOFKnowledge
   .list
-    @include grid($columns: 1fr 1fr 1fr)
+    @include grid($columns: 1fr 1fr 1fr 1fr)
     margin-top: 2rem
 
     .item
-      height: 400px
+      height: 25rem
       position: relative
       overflow: hidden
 
@@ -179,12 +215,12 @@
         padding: 1rem
         color: $light
         background-color: rgba($darkBg, .8)
+        text-align: center
         z-index: 2
 
         .name
           font-size: 1.2rem
           font-weight: 500
-          margin-bottom: .4rem
           text-transform: capitalize
 
         .desc
@@ -194,6 +230,7 @@
 .AdVentuRes
   .list
     @include grid($columns: 1fr 1fr 1fr)
+    grid-gap: 2rem
     margin-top: 2rem
 
   .package-footer
@@ -219,28 +256,47 @@
       font-weight: 500
 
 .HelpfulYetis
+  position: relative
+
   .list
-    @include grid($columns: 1fr 1fr 1fr 1fr 2fr)
+    @include grid($columns: 1fr 1fr 1fr 1fr 1fr)
     align-items: flex-start
-    margin-top: 2rem
 
     .item
-
-      &:nth-last-child(1)
-        margin-top: 1rem
+      padding: .5rem
+      background-color: rgba($light, .1)
+      border-radius: .4rem
 
       .image-area
-        height: 9rem
+        height: 15rem
         width: 100%
-        margin-bottom: .5rem
+        border-radius: .4rem
+        overflow: hidden
+        box-shadow: 0 0 10px rgba($dark, .2)
 
         img
           @include image()
 
+      .content
+        margin-top: .7rem
+
       .name
-        font-size: 16px
-        font-weight: 400
-        color: rgba($dark, .7)
+        font-size: 1.1rem
+        font-weight: 600
+        color: $dark
+
+      .phone
+        font-size: .85rem
+        color: $pri
+        margin: .3rem 0
+
+      .social-icon
+        @include flex($justify: flex-start)
+        gap: .4rem
+
+        i
+          color: $sec
+          font-size: 1.2rem
 
       p
         text-align: center
@@ -305,13 +361,24 @@
       width: 100%
       height: 50px
 
-.AboutSacred
+.About_us
+  .title
+    max-width: 58rem
+    margin: 0 auto
+    margin-bottom: 3rem
+
   .item
     @include flex($justify: stretch)
     gap: 2rem
 
     .content
       flex: 50%
+
+    .images-area
+      height: 23rem
+
+      img
+        @include image()
 
     .mySwiper
       flex: 50%
@@ -320,17 +387,16 @@
         .image-area
           filter: blur(0)
 
-    .image-area
-      height: 20rem
-      filter: blur(10px)
-      @include trans()
+      .image-area
+        height: 23rem
+        filter: blur(10px)
+        @include trans()
 
-      img
-        @include image()
+        img
+          @include image()
 
     .content
       p
-        margin-bottom: 1rem
         line-height: 1.7rem
         font-size: 17px
         color: rgba($dark, .7)
@@ -341,20 +407,15 @@
         font-weight: 300
         margin-bottom: 1rem
 
-      .button-group
-        @include flex($justify: center)
-        gap: 1rem
+  .button-group
+    gap: 1rem
+    margin-top: 1rem
+    margin-bottom: .3rem
 
-        a
-          &:nth-child(2)
-            button
-              @include customButton($bgcolor: $darkBg, $color: $light)
-
-          &:nth-child(1)
-            button
-              @include customButton($bgcolor: $light, $color: $pri)
-              border: 2px solid $pri
-              background-color: $pri
+    button
+      font-size: 1rem !important
+      @include customButton($bgcolor: $pri, $color: $light)
+      border: 2px solid $pri
 
 .PageBanner
   height: 60vh
@@ -425,14 +486,6 @@
   .mySwiper
     .swiper-slide
       height: 360px
-      width: 300px !important
-      @include flex($justify: center)
-      @include trans()
-      opacity: .4
-
-      &.swiper-slide-active
-        width: 600px !important
-        opacity: 1
 
       img
         @include image()
@@ -1022,7 +1075,7 @@
                 @include flex($justify: flex-end)
 
                 button
-                  @include customButton($bgcolor: $light, $color: $pri)
+                  @include customButton($bgcolor: $pri, $color: $light)
                   background-color: $pri
                   border: 2px solid $pri
                   text-transform: uppercase
@@ -1088,7 +1141,7 @@
 
         button
           width: 100%
-          @include customButton($bgcolor: $light, $color: $pri)
+          @include customButton($bgcolor: $pri, $color: $light)
           border: 3px solid $pri
           font-size: 1.1rem
           height: 50px
@@ -1657,16 +1710,57 @@
           text-align: justify
 
   &.BloggingDetailsPage
+    .book-list
+      @include flex($justify: center)
+      gap: 2rem
+      flex-wrap: wrap
+      margin-top: 2rem
+
+      .book-card
+        img
+          height: 13rem
+          width: 10rem
+          object-fit: cover
+
+        .name
+          font-size: 1rem
+          font-weight: 400
+          text-align: center
+          margin-top: .5rem
+
     .blogging-area
+      display: block
+
+      .with-image
+        .about-content
+          text-align: center
+
+        .image
+          margin-bottom: 2rem
+
+          img
+            @include image()
+
       .blogging-cards-area
-        flex: 70%
+        flex: 100%
         width: 100%
+
+        h1
+          text-align: center
+
+        p
+          text-align: center
+          font-size: 1rem
+          margin-bottom: 1rem
 
         .desc
           text-align: justify
           line-height: 1.5rem
           color: rgba($dark, .8)
           margin-top: .7rem
+
+          img
+            @include image()
 
       .blogging-search-area
         flex: 30%
@@ -2732,3 +2826,235 @@
       &:hover
         background-color: $sec
         color: $light
+
+.CertificatesPartners
+  .list
+    margin-top: 2rem
+
+    .mySwiper
+      .swiper-slide
+        width: auto
+
+    .item
+      width: auto
+      height: 3rem
+
+      img
+        height: 90%
+        width: 90%
+        object-fit: contain
+
+.VideoBanner
+  .video-image-area
+    position: relative
+
+    .image
+      height: 40rem
+
+      img
+        @include image()
+
+    &::after
+      content: ''
+      position: absolute
+      @include dark($opacity: .3)
+      z-index: 1
+
+    .content
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 2rem
+      max-width: 40rem
+      z-index: 2
+      color: $light
+      line-height: 3.5rem
+
+      .video-title
+        font-size: 3rem
+
+      .button-group
+        margin-top: 1rem
+        @include flex($justify: flex-start)
+        gap: 2rem
+
+        .explore
+          @include customButton($bgcolor: $pri, $color: $light)
+
+        @keyframes circleAnimate
+          0%
+            transform: translate(-50%, -50%) scale(0.6)
+            opacity: 1
+
+          100%
+            transform: translate(-50%, -50%) scale(1.7)
+            opacity: 0
+
+        .video-play-btn
+          height: 3rem
+          width: 3rem
+          border-radius: 50%
+          background-color: $light
+          @include flex($justify: center)
+          position: relative
+          cursor: pointer
+
+          &::after,
+          &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) scale(0.6)
+            height: 2.3rem
+            width: 2.3rem
+            border-radius: 50%
+            border: .14rem solid $light
+            opacity: 1
+            animation: circleAnimate 1.8s ease-in-out infinite
+
+          &::before
+            height: 3rem
+            width: 3rem
+
+          i
+            font-size: 1rem
+
+.OurPartners
+  position: relative
+
+  section
+    padding-top: 0
+
+  .title
+    color: $dark
+    margin-bottom: 1rem
+    font-size: 1.4rem
+    font-weight: 700
+    text-align: left
+
+  .list
+
+    .mySwiper
+      .swiper-slide
+        width: auto
+
+    .item
+      width: auto
+      height: 5rem
+      width: 100%
+      background-color: $light
+      padding: .5rem
+      border-radius: .5rem
+
+      img
+        height: 100%
+        width: 100%
+        object-fit: contain
+
+.searched-data-page
+  .page-banner
+    background: #eee
+
+    .wrapper
+      background: none
+
+.package-search-area
+  border-bottom: none
+  width: 100%
+
+  .form
+    width: 100%
+
+.package-search
+  @include flex($justify: center)
+  background-color: $light
+  margin: 50px 0
+  border-radius: 5px
+
+  .group
+    position: relative
+    height: 50px
+    width: 100%
+    @include flex($justify: center)
+    padding: 0 .5rem 0 1.5rem
+
+    &:nth-child(1)
+      &::after
+        display: none
+
+    &::after
+      content: ""
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      height: 70%
+      width: 1px
+      background-color: rgba($dark, .3)
+
+    select
+      color: $para
+
+    input, select
+      width: 100%
+      height: 100%
+      padding: .5rem 1rem
+      color: $para
+
+    .icon
+      position: absolute
+      left: 10px
+      top: 50%
+      transform: translateY(-50%)
+      @include flex($justify: center)
+
+  button
+    @include customButton($bgcolor: $btn, $color: $light )
+    height: 50px
+    cursor: pointer
+    border-radius: 0 5px 5px 0
+    position: relative
+    @include flex($justify: center)
+    gap: 10px
+
+    &.active
+      pointer-events: none
+      opacity: .8
+
+      &::before
+        display: block
+
+    &::before
+      content: ''
+      height: 25px
+      width: 25px
+      border: 2px solid transparent
+      border-top: 2px solid $light
+      border-bottom: 2px solid $light
+      border-radius: 50%
+      animation: loadingBtn .8s infinite cubic-bezier(0.77, 0, 0.175, 1)
+      display: none
+
+@keyframes loadingBtn
+  0%
+    transform: rotate(0)
+
+  100%
+    transform: rotate(360deg)
+
+@media only screen and ( max-width: 800px )
+  .package-search
+    flex-direction: column
+
+    .group
+      &::after
+        height: 1px
+        width: 100%
+        left: 0
+        top: 0%
+        transform: translateY(0%)
+
+    button
+      width: 100%
+      border-radius: 4px

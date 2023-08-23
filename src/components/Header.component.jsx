@@ -29,180 +29,160 @@ const HeaderComponent = () => {
     setDestinationsSelected(false);
   }, [location]);
 
-  // console.log(contactDatas);
-
   return (
     <React.Fragment>
       <header>
         <div className="wrapper">
-          <div className="logo-area">
+          <div className="header-top">
             <Link to="/">
               <div className="logo">
-                <img src={Logo} alt="logo" />
+                <img
+                  // src={contactDatas && contactDatas.branding.logo}
+                  src={Logo}
+                  alt="logo"
+                />
               </div>
             </Link>
-          </div>
 
-          <div className="header-area">
-            <div className="header-top">
-              <div className="header-other">
-                <div className="phoneNumber">
-                  <a
-                    href={`tel:${contactDatas && contactDatas.branding.phone}`}
-                    className={`nav-btn`}
-                  >
-                    <div className="icon">
-                      <i className="fas fa-mobile-alt"></i>
-                    </div>
-                    {contactDatas && contactDatas.branding.phone}
-                  </a>
-                  <p>Direct Call or WhatsApp 24/7</p>
-                </div>
-
-                <div
-                  className={`side-nav-btn ${sideNavHidden ? "active" : ""}`}
-                  onClick={() => setSideNavHidden(!sideNavHidden)}
+            <div className="header-other">
+              <div className="phoneNumber">
+                <a
+                  href={`tel:${contactDatas && contactDatas.branding.phone}`}
+                  className={`nav-btn`}
                 >
-                  <div className="das"></div>
-                </div>
+                  <div className="icon">
+                    <img src={telephoneImage} alt="" />
+                  </div>
+                  {contactDatas && contactDatas.branding.phone}
+                </a>
+                <p>Direct Call or WhatsApp 24/7</p>
+              </div>
+
+              <div
+                className={`side-nav-btn ${sideNavHidden ? "active" : ""}`}
+                onClick={() => setSideNavHidden(!sideNavHidden)}
+              >
+                <div className="das"></div>
               </div>
             </div>
+          </div>
 
-            <div className="inner">
-              <ul className="nav-links">
-                <li>
-                  <Link to="/destinations">
-                    <button
-                      className={`nav-btn ${
-                        location.pathname === "/destinations" ? "active" : ""
-                      }`}
-                    >
-                      DESTINATIONS
-                    </button>
-                  </Link>
-                </li>
-
-                <li>
-                  <Link to="/destination-details/nepal">
-                    <button
-                      className={`nav-btn ${
-                        location.pathname === "/destination-details/nepal" ? "active" : ""
-                      }`}
-                    >
-                      Peak climbing
-                    </button>
-                  </Link>
-                </li>
-
-                <li>
-                  <Link to="/search-page">
-                    <button
-                      className={`nav-btn ${
-                        location.pathname === "/search-page" ? "active" : ""
-                      }`}
-                    >
-                      Tour
-                    </button>
-                  </Link>
-                </li>
-
-                <li>
-                  <Link to="/expeditions">
-                    <button
-                      className={`nav-btn ${
-                        location.pathname === "/expeditions" ? "active" : ""
-                      }`}
-                    >
-                      Expedition
-                    </button>
-                  </Link>
-                </li>
-
-                <li className="drop-menu">
-                  <button className="nav-btn">
-                    About <i className="fas fa-angle-down"></i>
-                  </button>
-
-                  <ul className="drop-down">
-                    <li>
-                      <Link to="/meet-the-team">
-                        <button
-                          className={`${
-                            location.pathname === "/meet-the-team"
-                              ? "active"
-                              : ""
-                          }`}
-                        >
-                          Meet The Team
-                        </button>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link to="/reasons-to-choose-us">
-                        <button
-                          className={`${
-                            location.pathname === "/reasons-to-choose-us"
-                              ? "active"
-                              : ""
-                          }`}
-                        >
-                          Reasons To Choose Us
-                        </button>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link to="/flexibility-promise">
-                        <button
-                          className={`${
-                            location.pathname === "/flexibility-promise"
-                              ? "active"
-                              : ""
-                          }`}
-                        >
-                          Flexibility Promise
-                        </button>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link to="/awesomeness-guarantee">
-                        <button
-                          className={`${
-                            location.pathname === "/awesomeness-guarantee"
-                              ? "active"
-                              : ""
-                          }`}
-                        >
-                          Awesomeness Guarantee
-                        </button>
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
+          <div className="inner">
+            <ul className="nav-links">
+              <li>
+                <Link to="/destination">
                   <button
-                    onClick={() => setContactPopup(!contactPopup)}
-                    className={`nav-btn`}
+                    className={`nav-btn ${
+                      location.pathname === "/destination" ? "active" : ""
+                    }`}
                   >
-                    Contact Us
+                    DESTINATIONS
                   </button>
-                </li>
+                </Link>
+              </li>
 
-                {/* <li className="loginMember">
-              <a href="#">
+              <li>
+                <Link to="/destination-details/nepal">
+                  <button
+                    className={`nav-btn ${
+                      location.pathname === "/destination-details/nepal"
+                        ? "active"
+                        : ""
+                    }`}
+                  >
+                    Peak climbing
+                  </button>
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/tour">
+                  <button
+                    className={`nav-btn ${
+                      location.pathname === "/tour" ? "active" : ""
+                    }`}
+                  >
+                    Tour
+                  </button>
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/expedition">
+                  <button
+                    className={`nav-btn ${
+                      location.pathname === "/expedition" ? "active" : ""
+                    }`}
+                  >
+                    Expedition
+                  </button>
+                </Link>
+              </li>
+
+              <li className="drop-menu">
+                <button className="nav-btn">
+                  About <i className="fas fa-angle-down"></i>
+                </button>
+
+                <ul className="drop-down">
+                  <li>
+                    <Link to="/meet-the-team">
+                      <button
+                        className={`${
+                          location.pathname === "/meet-the-team" ? "active" : ""
+                        }`}
+                      >
+                        Meet The Team
+                      </button>
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/about-us">
+                      <button
+                        className={`${
+                          location.pathname === "/about-us" ? "active" : ""
+                        }`}
+                      >
+                        About Us
+                      </button>
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/blog">
+                      <button
+                        className={`${
+                          location.pathname === "/blog" ? "active" : ""
+                        }`}
+                      >
+                        Blog
+                      </button>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
                 <button
                   onClick={() => setContactPopup(!contactPopup)}
                   className={`nav-btn`}
                 >
-                  Members <br /> Login
+                  Contact Us
                 </button>
-              </a>
-            </li> */}
-              </ul>
-            </div>
+              </li>
+
+              {/* <li className="loginMember">
+        <a href="#">
+          <button
+            onClick={() => setContactPopup(!contactPopup)}
+            className={`nav-btn`}
+          >
+            Members <br /> Login
+          </button>
+        </a>
+      </li> */}
+            </ul>
           </div>
         </div>
       </header>

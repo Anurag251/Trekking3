@@ -16,20 +16,32 @@
       &:hover
         transform: scale(1.05) translateX(4px)
 
+        &::after
+          background-color: $pri
+          color: $light
+
     .swiper-button-prev
       &:hover
         transform: scale(1.05) translateX(-4px)
+
+        &::after
+          background-color: $pri
+          color: $light
 
     .swiper-button-next, .swiper-button-prev
       @include flex($justify: center)
       @include trans()
 
-      img
-        height: 30px
-        width: 30px
-
       &::after
-        display: none
+        height: 2rem !important
+        width: 2rem !important
+        font-size: 1.1rem
+        border: 2px solid $pri
+        color: $pri
+        @include flex($justify: center)
+        @include trans()
+
+        // display: none
 
   .item
     @include flex($justify: center)
@@ -64,3 +76,6 @@
         color: $pri
         font-size: 16px
         font-weight: 600
+
+      .read-more
+        cursor: pointer

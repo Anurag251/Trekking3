@@ -1,18 +1,129 @@
-import React from "react";
 import PageBannerComponent from "../components/PageBanner.component";
-import DownloadTripGuideComponent from "../components/DownloadTripGuide.component";
 import AboutPageGalleryComponent from "../components/AboutPageGallery.component";
-import WhyChooseUsComponent from "../components/WhyChooseUs.component";
-import HaveChatComponent from "../components/HaveChat.component";
+import { Fragment, useContext, useEffect, useState } from "react";
+import { AllDataContext } from "../context/AllData.context";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+
+import { EffectFade, Autoplay } from "swiper";
 
 const ReasonsToChooseUsPage = () => {
+  const { aboutDetails, galleryDatas, contactDatas } =
+    useContext(AllDataContext);
+
+  const [thisPageData, setThisPageData] = useState(null);
+
+  useEffect(() => {
+    aboutDetails?.forEach((data) => {
+      if (data.slug === "reasons-to-choose-sacred") {
+        setThisPageData(data);
+      }
+    });
+  }, [aboutDetails]);
+
   return (
     <div className="ReasonsToChooseUs">
       <PageBannerComponent image="https://i.assetzen.net/i/Cull2QUZyWCT/w:1920/h:500/q:70.webp">
-        Reason to choose sacred
+        Reason to Sherpa Tech
       </PageBannerComponent>
 
+      <div className="About_us">
+        <section className="bg-color">
+          <div className="wrapper">
+            <div className="title">{contactDatas?.branding?.about_title}</div>
+            <div className="item">
+              <div className="content">
+                <p
+                  className="desc"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      aboutDetails !== null
+                        ? aboutDetails[1]?.description.length > 1000
+                          ? `${aboutDetails[1]?.description.slice(0, 1000)}...`
+                          : aboutDetails[1]?.description
+                        : "",
+                  }}
+                />
+              </div>
+
+              <Swiper
+                slidesPerView={1}
+                centeredSlides={true}
+                effect={"fade"}
+                loop={true}
+                speed={1000}
+                autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }}
+                modules={[Autoplay, EffectFade]}
+                className="mySwiper"
+              >
+                {galleryDatas?.map((data, idx) => (
+                  <SwiperSlide key={idx}>
+                    <div className="image-area">
+                      <img src={data?.original_image} alt={data?.title} />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
+        </section>
+      </div>
+
       <div className="wrapper">
+        <section>
+          <div className="about-content">
+            <p
+              className="desc"
+              dangerouslySetInnerHTML={{
+                __html: thisPageData?.description,
+              }}
+            ></p>
+          </div>
+        </section>
+
+        {thisPageData?.contents?.map((data, idx) => (
+          <Fragment key={idx}>
+            {data?.image !== null ? (
+              <section className="with-image">
+                <div className="image">
+                  <img src={data?.image?.original_image} alt={data?.text} />
+                </div>
+
+                <div className="about-content">
+                  <h3>{data?.text}</h3>
+
+                  <p
+                    className="desc"
+                    dangerouslySetInnerHTML={{
+                      __html: data?.content,
+                    }}
+                  ></p>
+                </div>
+              </section>
+            ) : (
+              <section>
+                <div className="about-content">
+                  <h3>{data?.text}</h3>
+
+                  <p
+                    className="desc"
+                    dangerouslySetInnerHTML={{
+                      __html: data?.content,
+                    }}
+                  ></p>
+                </div>
+              </section>
+            )}
+          </Fragment>
+        ))}
+
         <section>
           <div className="about-content">
             <h3>Understanding the need for adventure...</h3>

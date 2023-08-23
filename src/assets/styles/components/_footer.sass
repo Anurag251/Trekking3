@@ -6,10 +6,12 @@ footer
   padding: 3rem 0 2rem
   @include bgImage()
   position: relative
+  background-attachment: fixed
 
   &::before
     content: ''
-    @include dark($opacity: .8)
+    @include dark($opacity: .0)
+    background-color: rgba($light, .95)
 
   .footer-list
     @include grid($columns: 1fr 1fr 1fr 1fr)
@@ -17,15 +19,15 @@ footer
     z-index: 2
 
     .item
-      color: $light
+      color: $dark
       margin-bottom: 1rem
 
       .logo, .f-title
         margin-bottom: 1rem
 
         img
-          height: 4rem
-          width: 13rem
+          height: 5rem
+          width: 90%
           object-fit: contain
 
       .f-title
@@ -41,7 +43,7 @@ footer
             margin-right: 5px
 
           a
-            color: $light
+            color: $dark
             width: 100%
 
       .desc
@@ -55,7 +57,7 @@ footer
     padding-top: 2rem
     margin-top: 2rem
     border-top: 1px solid #ADADAD
-    color: $light
+    color: $dark
     z-index: 2
     @include flex($justify: space-between)
 
@@ -66,4 +68,4 @@ footer
         padding: 0 1rem
 
         a
-          color: $light
+          color: $dark

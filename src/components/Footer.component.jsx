@@ -4,6 +4,9 @@ import footerImage from "../assets/images/footerbg.jpg";
 import { useContext } from "react";
 import { AllDataContext } from "../context/AllData.context";
 import Logo from "../assets/images/sherpa-tech-logo.svg";
+import HtmlToParagraphs from "./HtmlToParagraphs.component";
+import OurPartnersComponent from "./OurPartners.component";
+import HelpfulYetisComponent from "./HelpfulYetis.component";
 
 const FooterComponent = () => {
   const {
@@ -18,20 +21,32 @@ const FooterComponent = () => {
   const navigate = useNavigate();
 
   return (
-    <footer style={{ backgroundImage: `url(${footerImage})` }}>
+    <footer
+      style={{
+        backgroundImage: `url(https://8kexpeditions.com/images/about-intro.jpg)`,
+      }}
+    >
       <div className="wrapper">
+        <OurPartnersComponent />
+
         <div className="footer-list">
           <div className="item">
-            <div className="logo">
-              <img src={Logo} alt="logo" />
-            </div>
+            <Link to="/">
+              <div className="logo">
+                <img src={Logo} alt="logo" />
+              </div>
+            </Link>
 
-            <p
-              className="desc"
-              dangerouslySetInnerHTML={{
-                __html: aboutDetails && aboutDetails[0].description,
-              }}
-            />
+            {/* <HtmlToParagraphs
+              data={
+                aboutDetails !== ""
+                  ? aboutDetails !== null
+                    ? aboutDetails[0].description
+                    : "No Descriptions"
+                  : ""
+              }
+              length={200}
+            /> */}
           </div>
 
           <div className="item">
@@ -64,7 +79,7 @@ const FooterComponent = () => {
                     key={idx}
                     onClick={() => {
                       setSelectedCate(data.id);
-                      navigate("/search-page", {
+                      navigate(`/expedition-details/${data.id}`, {
                         state: {
                           searchedData: data.trips,
                         },
@@ -94,15 +109,19 @@ const FooterComponent = () => {
               </li>
               <li>
                 <i className="fas fa-envelope"></i>
-                <a
+                {/*  <a
                   href={`mailto:${contactDatas && contactDatas.branding.email}`}
                 >
                   {contactDatas && contactDatas.branding.email}
-                </a>
+                </a> */}
+
+                <a href={`mailto:info@sherpa-tech.com`}>info@sherpa-tech.com</a>
               </li>
             </ul>
           </div>
         </div>
+
+        {/* <HelpfulYetisComponent /> */}
 
         <div className="copyright">
           <span>© Copyright 2022 Company </span>

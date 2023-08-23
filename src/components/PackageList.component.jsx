@@ -1,62 +1,36 @@
-/* eslint-disable react/prop-types */
-import { useContext, useEffect } from "react";
+/* eslint-disable no-unused-vars */
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import PackageListCardComponent from "./PackageListCard.component";
-import { AllDataContext } from "../context/AllData.context";
+import PageSearchBoxComponent from "./SearchBoxBanner.component";
 
-const PackageListComponent = () => {
-  const {
-    categoriesDatas,
-    selectedCate,
-    setSelectedCate,
-    setSearchData,
-    selectedDatas,
-    setSelectedDatas,
-  } = useContext(AllDataContext);
+const SearchedDataPage = () => {
+  const [cardData, setCardData] = useState(null);
+  const loaction = useLocation();
 
   useEffect(() => {
-    if (categoriesDatas !== null) {
-      categoriesDatas
-        .filter((data) => data.id === selectedCate)
-        .forEach((data) => {
-          setSelectedDatas(data.trips);
-        });
-    }
-  }, [categoriesDatas, selectedCate]);
+    setCardData(loaction.state.searchedData);
+  }, [loaction]);
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
-    <div className="all-package">
-      <div className="packages-list-area">
-        <div className="categories">
-          <div className="filter-box">
-            <div className="filter-title">Filter</div>
-            <ul>
-              {categoriesDatas &&
-                categoriesDatas.map((cate, idx) => (
-                  <li key={idx}>
-                    <button
-                      className={cate.id === selectedCate ? "active" : ""}
-                      onClick={() => {
-                        setSearchData(null);
-                        setSelectedCate(cate.id);
-                      }}
-                    >
-                      {cate.category_name}
-                    </button>
-                  </li>
-                ))}
-            </ul>
-          </div>
-        </div>
+    <div className="searched-data-page">
+      <PageSearchBoxComponent />
 
-        <div className="packages-list">
-          {selectedDatas &&
-            selectedDatas.map((data, idx) => (
-              <PackageListCardComponent key={idx} data={data} />
+      {loaction.state !== null ? (
+        <section>
+          <div className="wrapper">
+            {loaction.state.searchedData.map((searchedData, idx) => (
+              <PackageListCardComponent key={idx} cardData={searchedData} />
             ))}
-        </div>
-      </div>
+          </div>
+        </section>
+      ) : null}
     </div>
   );
 };
 
-export default PackageListComponent;
+export default SearchedDataPage;

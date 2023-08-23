@@ -25,46 +25,53 @@ header
     @include trans()
 
   .wrapper
-    max-width: 1000px
+    @include flex($justify: stretch)
+    gap: 1rem
 
-  .header-top
-    height: 4.2rem
-    @include flex($justify: space-between)
+  .logo-area
 
     .logo
-      height: 60px
-      width: 190px
+      height: 4rem
+      width: 12rem
 
       img
         @include image()
         object-fit: contain
 
+  .header-area
+    width: 100%
+    @include flex($justify: space-between)
+
+    .whatsAppProfile
+      @include flex($justify: flxe-end)
+      gap: .4rem
+
+      .image
+        height: 2.2rem
+        width: 2.2rem
+        border-radius: 50%
+        overflow: hidden
+
+        img
+          @include image()
+
+      .centent
+        text-align: left
+
+        .number
+          font-size: .9rem
+
+        p
+          font-size: .76rem
+          font-weight: 300
+
+  .header-top
+    height: 3.5rem
+    @include flex($justify: flex-end)
+
     .header-other
       @include flex($justify: flex-end)
       gap: .5rem
-
-    .trustpilot-widget
-      height: 3rem
-      width: 13rem
-      @include flex($justify: center)
-      overflow: hidden
-
-      iframe
-        height: 100%
-        width: 100%
-        overflow: hidden
-        display: none
-
-        html
-          overflow: hidden
-
-        body
-          @include flex($justify: center)
-          overflow: hidden !important
-
-          img
-            @include image()
-            object-fit: contain !important
 
     .phoneNumber
       height: 100%
@@ -72,11 +79,11 @@ header
       padding: .7rem
 
       p
-        font-size: .8rem
+        font-size: .7rem
 
       .nav-btn
         gap: .5rem
-        font-size: 1.3rem
+        font-size: 1.1rem
         text-align: right
         @include flex($justify: flex-end)
         margin-right: 0 !important
@@ -85,19 +92,15 @@ header
         color: $pri
 
         .icon
-          height: 1.4rem
-          width: 1.4rem
+          height: 1.2rem
+          width: 1.2rem
 
           img
             @include image()
 
-        i
-          font-size: 1.1rem
-
   .inner
     @include flex($justify: space-between)
-    height: 3.5rem
-    border-top: 1px solid rgba($dark, .15)
+    height: 3rem
 
     .logo
       height: 50px
@@ -108,9 +111,10 @@ header
         object-fit: contain
 
     .nav-links
-      @include flex($justify: space-between)
+      @include flex($justify: flex-end)
       height: 100%
       width: 100%
+      gap: .2rem
 
       .drop-menu
         position: relative
@@ -122,35 +126,34 @@ header
 
         .drop-down
           position: absolute
-          top: 3.4rem
+          top: 3rem
           left: 100%
           transform: translateX(-50%)
           width: 14.5rem
-          background-color: $darkBg
+          background-color: $light
           pointer-events: none
+          border-radius: .3rem
+          padding: .4rem
           opacity: 0
 
           li
-            border-bottom: 1px solid rgba($light, .6)
-
             &:nth-last-child(1)
               border-bottom: none
 
             button
               cursor: pointer
               padding: .8rem 1rem
-              color: $light
+              color: $dark
               font-size: 1rem
               font-weight: 300
               width: 100%
               text-align: left
 
               &:hover
-                color: rgba($light, .8)
+                background-color: rgba($dark, .06)
 
               &.active
-                color: $light
-                background-color: $pri
+                background-color: rgba($dark, .06)
 
         a
           height: 100%
@@ -170,28 +173,24 @@ header
       li
         height: 100%
 
-        &:nth-child(1)
-          .nav-btn
-            padding-left: 0
-
-        &:nth-last-child(1)
-          .nav-btn
-            padding-right: 0
-
       .nav-btn
         height: 100%
-        font-size: 1.06rem
-        text-transform: uppercase
+        font-size: 1rem
+        text-transform: capitalize
         color: $dark
         cursor: pointer
         font-weight: 500
         padding: 0 .8rem
+        border-radius: .3rem
+
+        &:hover
+          background-color: rgba($dark, .06)
 
         // &:nth-last-child(1), &:nth-last-child(2)
         //   margin-right: 0
 
         &.active
-          border-radius: 4px
+          background-color: rgba($dark, .06)
 
   .side-nav-btn
     height: 20px
@@ -301,34 +300,6 @@ header
 
       &.active
         background-color: rgba($light,.2)
-
-    .drop-menu
-      &:hover
-        .drop-down-area
-          grid-template-rows: 1fr
-
-      .drop-down-area
-        display: grid
-        grid-template-rows: 0fr
-        @include trans()
-
-        .drop-down
-          overflow: hidden
-          background-color: rgba($light, .2)
-          border-radius: 6px
-
-          li
-            border-bottom: 1px solid rgba($light, .5)
-
-            &:nth-last-child(1)
-              border-bottom: none
-
-            button
-              padding: 1rem
-              width: 100%
-              color: $light
-              cursor: pointer
-              text-align: left
 
 .big-drop-down
   position: fixed

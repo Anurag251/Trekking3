@@ -2,7 +2,7 @@ import axios from 'axios';
 
 function createAPI() {
   const api = axios.create({
-    baseURL: "https://stnepal.com.np/trekking/api/v1",
+    baseURL: "https://stnepal.com.np/newtrekking/api/v1",
     // baseURL: "https://mountaingotrekking.com/trekking/api/v1",
     headers: {
       "content-type": "application/json",

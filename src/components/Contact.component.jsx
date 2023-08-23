@@ -252,7 +252,9 @@ export const ContactComponent = () => {
 
             <div className="text-area">
               <h4>Email Address</h4>
-              <h6>{contactDatas && contactDatas.branding.email}</h6>
+              <h6>{/* contactDatas && contactDatas.branding.email */}</h6>
+
+              <h6>info@sherpa-tech.com</h6>
             </div>
           </div>
         </div>

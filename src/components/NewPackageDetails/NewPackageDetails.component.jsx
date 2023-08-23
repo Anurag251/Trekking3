@@ -1,6 +1,5 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import PackageBannerComponent from "./PackageBanner.component";
-import PackageMainDetailsComponent from "./PackageMainDetails.component";
 import NavigateButtonsComponent from "./NavigateButtons.component";
 import TripOverviewComponent from "./TripOverview.component";
 import ItineraryComponent from "./Itinerary.component";
@@ -47,8 +46,6 @@ const NewPackageDetailsComponent = () => {
             setChoosenPrice={setChoosenPrice}
             popup={true}
           />
-
-          <PackageMainDetailsComponent data={selectedData} />
 
           <NavigateButtonsComponent data={selectedData} />
 

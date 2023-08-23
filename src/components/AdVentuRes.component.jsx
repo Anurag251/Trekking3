@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import React, { useContext } from "react";
 import NewPackageCardComponent from "./NewPackageCard.component";
 import { AllDataContext } from "../context/AllData.context";
+import { Link } from "react-router-dom";
 
-const AdVentuResComponent = () => {
+const AdVentuResComponent = ({ title, subTitle }) => {
   const { tripDatas } = useContext(AllDataContext);
 
   return (
@@ -10,18 +12,23 @@ const AdVentuResComponent = () => {
       <section>
         <div className="wrapper">
           <div className="title-part">
-            <h5>TOP Sacred</h5>
-
-            <div className="name">adVentuRes</div>
+            <div className="name">{title}</div>
+            <h5>{subTitle}</h5>
           </div>
 
           <div className="list">
             {tripDatas &&
               tripDatas
-                .filter((data, idx) => idx < 3)
+                .filter((data, idx) => idx < 4)
                 .map((data, idx) => (
                   <NewPackageCardComponent key={idx} data={data} />
                 ))}
+          </div>
+
+          <div className="view-all">
+            <Link to="/packages">
+              <button>View All</button>
+            </Link>
           </div>
         </div>
       </section>
