@@ -271,7 +271,7 @@ const PackageBookingComponent = ({
                   />
                 </div>
 
-                <div className="group">
+                <div className="group textarea">
                   <label htmlFor="inputCommentRemarks">
                     Comment/Remarks <span>(optional)</span>
                   </label>

@@ -202,3 +202,26 @@ export const IconsArrow = () => (
     />
   </svg>
 );
+
+export const IconSearch = () => (
+  <svg
+    width="21"
+    height="21"
+    viewBox="0 0 21 21"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8.5 13.5C11.2614 13.5 13.5 11.2614 13.5 8.5C13.5 5.73858 11.2614 3.5 8.5 3.5C5.73858 3.5 3.5 5.73858 3.5 8.5C3.5 11.2614 5.73858 13.5 8.5 13.5Z"
+      stroke="#464646"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M17.571 17.5L12 12"
+      stroke="#464646"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

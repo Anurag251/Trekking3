@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+/* eslint-disable react/prop-types */
+import { useContext } from "react";
 import { AllDataContext } from "../context/AllData.context";
 
-const HaveChatComponent = () => {
+const HaveChatComponent = ({ title, subTitle, desc }) => {
   const { contactDatas } = useContext(AllDataContext);
 
   return (
@@ -11,27 +12,16 @@ const HaveChatComponent = () => {
           <div className="list">
             <div className="item">
               <div className="title-part">
-                <h5>WE'D LOVE TO</h5>
+                <h5>{title}</h5>
 
-                <div className="name">Have a cHat</div>
+                <div className="name">{subTitle}</div>
               </div>
 
-              <p className="desc">
-                If you would like to discuss your next adventure, have any
-                questions or simply just a good old chin wag, then please call
-                us, or send us a message.
-              </p>
+              <p className="desc">{desc}</p>
 
               <div className="button-group">
                 <a href={`tel:${contactDatas && contactDatas.branding.phone}`}>
                   <button className="callBtn">Book A Call Back</button>
-                </a>
-
-                <a href={`tel:${contactDatas && contactDatas.branding.phone}`}>
-                  <button className="phoneBtn">
-                    <i className="fas fa-phone"></i>{" "}
-                    {contactDatas && contactDatas.branding.phone}
-                  </button>
                 </a>
               </div>
             </div>

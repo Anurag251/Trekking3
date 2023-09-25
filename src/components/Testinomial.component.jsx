@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -12,7 +13,7 @@ import { Link } from "react-router-dom";
 import HtmlToParagraphs from "./HtmlToParagraphs.component";
 import TestimonialCardComponent from "./TestimonialCard.component";
 
-const TestinomialComponent = () => {
+const TestinomialComponent = ({ title, subTitle }) => {
   const { reviewDatas } = useContext(AllDataContext);
   const [paragraphLength, setParagraphLength] = useState(300);
 
@@ -44,8 +45,8 @@ const TestinomialComponent = () => {
     <section>
       <div className="wrapper">
         <div className="title-part">
-          <div className="name">Testimonials</div>
-          <h5>Why travel with us</h5>
+          <div className="name">{title}</div>
+          <h5>{subTitle}</h5>
         </div>
 
         <div className="testinomial">

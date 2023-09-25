@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { AllDataContext } from "../context/AllData.context";
 import { apis } from "../utils/apis";
 
-export const ContactComponent = () => {
+export const ContactComponent = ({ subTitle, title }) => {
   const { setMessage, contactDatas, contactPopup, setContactPopup } =
     useContext(AllDataContext);
   const [buttonLoading, setButtonLoading] = useState(false);
@@ -83,7 +83,7 @@ export const ContactComponent = () => {
       <div className="contact-form">
         <div className="contact-title">
           <div className="title-area">
-            <h2>Drop Us A Message</h2>
+            <h2>{title}</h2>
 
             <div
               className="closeContact"
@@ -93,10 +93,7 @@ export const ContactComponent = () => {
             </div>
           </div>
 
-          <p>
-            Our team is here to support you 24/7. Please feel free to provide
-            your queries. You will get response within few minutes.
-          </p>
+          <p>{subTitle}</p>
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -161,7 +158,7 @@ export const ContactComponent = () => {
               </div>
             </div>
 
-            <div className="group">
+            <div className="group textarea">
               <label htmlFor="inputCommentRemarks">Message</label>
 
               <textarea
@@ -173,7 +170,7 @@ export const ContactComponent = () => {
                 value={formValues.message}
                 cols="30"
                 rows="10"
-                placeholder="Your message to our hotel manager"
+                placeholder="Your message to our trekking manager"
               ></textarea>
             </div>
           </div>
@@ -254,7 +251,7 @@ export const ContactComponent = () => {
               <h4>Email Address</h4>
               <h6>{/* contactDatas && contactDatas.branding.email */}</h6>
 
-              <h6>info@sherpa-tech.com</h6>
+              <h6>{contactDatas && contactDatas.branding.email}</h6>
             </div>
           </div>
         </div>
